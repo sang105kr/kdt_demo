@@ -28,8 +28,8 @@ public class NaverNews {
             .build();
   }
 
-  public String reqNews(){
-    final String query = "LG화학";
+  public String reqNews(String keyword){
+    final String query = keyword; //"LG화학";
     final int display = 10;
     final int start = 1;
     // http get 요청하면 http 응답메시지 수신

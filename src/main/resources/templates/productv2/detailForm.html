@@ -84,7 +84,16 @@
 
   $delModal.addEventListener('close',evt=>{
     if($delModal.returnValue == 'ok'){
-      location.href = `/products/${pid}/del`; // GET http://서버주소 or 서버도메인/products/상품번호/del
+      //location.href = `/products/${pid}/del`; // GET http://서버주소 or 서버도메인/products/상품번호/del
+      const url = `/products/${pid}/del`;
+      fetch(url, { method: 'DELETE'})
+        .then(res=>{
+          if(res.ok){  // 상태코드 200 ok인 경우
+            location.href = '/products';
+          }else{
+            alert('삭제실패');
+          }
+        });
     }
   });
 

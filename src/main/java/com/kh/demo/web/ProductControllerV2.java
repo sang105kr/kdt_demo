@@ -5,6 +5,7 @@ import com.kh.demo.domain.product.svc.ProductSVC;
 import com.kh.demo.web.form.product.AddForm;
 import com.kh.demo.web.form.product.UpdateForm;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -95,14 +96,19 @@ public class ProductControllerV2 {
   }
 
   //단건삭제
-  @GetMapping("/{pid}/del")
-  public String deleteById(@PathVariable("pid") Long productId){
+  @ResponseBody   //응답 메세지 바디에 직접 작성
+  @DeleteMapping("/{pid}/del")
+  public ResponseEntity<?> deleteById(@PathVariable("pid") Long productId){
     log.info("deleteById={}",productId);
 
     //1)상품 삭제 -> 상품테이블에서 삭제
     int deletedRowCnt = productSVC.deleteById(productId);
-    
-    return "redirect:/products";     // GET http://localhost:9080/products/
+    if(deletedRowCnt == 1){
+      return ResponseEntity.ok().build(); //응답코드 200 OK
+    }else{
+      return ResponseEntity.notFound().build(); // 응답코드 404 NotFound
+    }
+    //return "redirect:/products";     // GET http://localhost:9080/products/
   }
 
   //여러건삭제

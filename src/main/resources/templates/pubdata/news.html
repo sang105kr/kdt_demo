@@ -12,7 +12,7 @@
   <form action="/pubdata/news/search" method="GET">
     <label for="search">검색어</label>
     <input id='search' type="text" name="keyword">
-    <button>검색</button>
+    <button id="searchBtn" type="button">검색</button>
   </form>
 </div>
 <div>
@@ -28,14 +28,51 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th>글로벌 수주 '낭보'…이차전지 소재 자리매김 '총력'</th>
-        <th>https://www.pinpointnews.co.kr</th>
-        <th>LG화학이 배터리 소재 사업을 중심으로 발 빠르게 체질개선에 나서고 있다.</th>
-        <th>Tue, 20 Feb 2024 16:02:00 +0900</th>
-      </tr>
+<!--      <tr>-->
+<!--        <td>글로벌 수주 '낭보'…이차전지 소재 자리매김 '총력'</td>-->
+<!--        <td>https://www.pinpointnews.co.kr</td>-->
+<!--        <td>LG화학이 배터리 소재 사업을 중심으로 발 빠르게 체질개선에 나서고 있다.</td>-->
+<!--        <td>Tue, 20 Feb 2024 16:02:00 +0900</td>-->
+<!--      </tr>-->
     </tbody>
   </table>
 </div>
+<script>
+  searchBtn.addEventListener('click',evt=>{
+    const keyword = search.value;
+    const url = `/pubdata/news/search?keyword=${keyword}`;
+    const option = {
+      method : 'GET',
+    };
+    fetch(url,option)
+      .then(res=>{
+        if(!res.ok) {
+          throw new Error('응답오류발생');
+        }
+        return res.json();   //응답메시지 바디를 읽어서 json포맷문자열=>js객체로 변환
+      })
+      .then(res=>{
+        console.log(res.items)
+        res.items.forEach(item=>console.log(item.title))
+        makeHtml(res);
+      })
+      .catch(error=>console.error('오류 : ',error));
+  });
+
+  function makeHtml(res){
+    res.items.forEach(article=>console.log(article.title,article.link,article.pubDate,article.description));
+    const $tbody = document.querySelector('tbody');
+    let html = '';
+    res.items.forEach(article=>{
+       html += `<tr>
+                  <td>${article.title}</td>
+                  <td><a href='${article.link}'>원문</a></td>
+                  <td>${article.description}</td>
+                  <td>${article.pubDate}</td>
+                 </tr>`;
+    });
+    $tbody.innerHTML = html;
+  }
+</script>
 </body>
 </html>

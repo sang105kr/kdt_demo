@@ -27,7 +27,6 @@ public class PubdataController {
     return "pubdata/news";
   }
 
-
   @ResponseBody
   @GetMapping("/news/search")
   public String search(

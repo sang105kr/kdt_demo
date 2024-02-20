@@ -14,6 +14,9 @@ public class NaverNews {
 
   private final WebClient webClient;
   private String baseUrl = "https://openapi.naver.com";
+  //개인 id정보로 수정!!
+  private final String Client_Id = "rU1BGqPDYCKpVAtW30FM";
+  private final String Client_Secret = "cOAsPt0pi2";
 
   @Autowired
   public NaverNews(WebClient.Builder webClientBilder){
@@ -32,6 +35,7 @@ public class NaverNews {
     final String query = keyword; //"LG화학";
     final int display = 10;
     final int start = 1;
+
     // http get 요청하면 http 응답메시지 수신
     Mono<String> response = webClient.get()
             .uri(uriBuilder -> uriBuilder
@@ -41,8 +45,8 @@ public class NaverNews {
               .queryParam("start",start)          //start
 //              .queryParam("sort","")                       //sort
               .build())
-            .header("X-Naver-Client-Id","rU1BGqPDYCKpVAtW30FM")
-            .header("X-Naver-Client-Secret","cOAsPt0pi2")
+            .header("X-Naver-Client-Id",Client_Id)
+            .header("X-Naver-Client-Secret",Client_Secret)
             .retrieve()
             .bodyToMono(String.class);
     // http응답메시지 바디를 읽어 문자열로 반환 

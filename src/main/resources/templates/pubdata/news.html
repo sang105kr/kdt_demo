@@ -77,7 +77,7 @@
 <h3>뉴스검색</h3>
 <div class="wrap">
 <div>
-  <form action="/pubdata/news/search" method="GET">
+  <form action="#" method="GET">
     <label for="search">검색어</label>
     <input id='search' type="text" name="keyword">
     <button id="searchBtn" type="button">검색</button>
@@ -113,9 +113,12 @@
   const pagination = new Pagination(10, 10); // 한페이지에 보여줄 레코드건수,한페이지에 보여줄 페이지수
 
   search.addEventListener('keydown',evt=>{
-    evt.preventDefault();
-    if(evt.key !== 'Enter') return;
-    callNaverApi(1);
+
+    if(evt.key == 'Enter') {
+      event.preventDefault();
+      callNaverApi(1);
+    }
+
   });
 
   searchBtn.addEventListener('click',evt=>callNaverApi(1));

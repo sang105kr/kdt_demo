@@ -110,7 +110,7 @@
   import {Pagination,chageDateTime} from '/js/common.js';
 
   //페이징 객체 생성
-  const pagination = new Pagination(20, 5); // 레코드건수,페이지수
+  const pagination = new Pagination(10, 10); // 한페이지에 보여줄 레코드건수,한페이지에 보여줄 페이지수
 
   search.addEventListener('keydown',evt=>{
     evt.preventDefault();
@@ -122,8 +122,7 @@
 
   function callNaverApi(start=1){
     const keyword = search.value;
-    const start = pagination.recordsPerPage;
-    const display = pagination.pagesPerPage
+    const display = pagination.recordsPerPage;
     const url = `/pubdata/news/search?keyword=${keyword}&start=${start}&display=${display}`;
     const option = {
       method : 'GET',

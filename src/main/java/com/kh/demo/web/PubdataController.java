@@ -56,8 +56,8 @@ public class PubdataController {
           @RequestParam("beginBasDt") String beginBasDt,  //시작일
           @RequestParam("endBasDt") String endBasDt       //종료일
   ){
-    stockPrice.reqStockPrice(itmsNm,beginBasDt,endBasDt);
+    String data = stockPrice.reqStockPrice(itmsNm,beginBasDt,endBasDt);
     log.info("itmsNm={},beginBasDt={},endBasDt={}",itmsNm,beginBasDt,endBasDt);
-    return "pubdata/stocks";
+    return data;
   }
 }

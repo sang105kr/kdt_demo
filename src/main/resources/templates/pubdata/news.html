@@ -22,7 +22,6 @@
     <thead>
       <tr>
         <th>제목</th>
-        <th>링크</th>
         <th>요약</th>
         <th>작성일</th>
       </tr>
@@ -38,7 +37,14 @@
   </table>
 </div>
 <script>
-  searchBtn.addEventListener('click',evt=>{
+  search.addEventListener('keydown',evt=>{
+    evt.preventDefault();
+    if(evt.key !== 'Enter') return;
+    callNaverApi(evt);
+  });
+  searchBtn.addEventListener('click',callNaverApi);
+
+  function callNaverApi(evt){
     const keyword = search.value;
     const url = `/pubdata/news/search?keyword=${keyword}`;
     const option = {
@@ -51,22 +57,17 @@
         }
         return res.json();   //응답메시지 바디를 읽어서 json포맷문자열=>js객체로 변환
       })
-      .then(res=>{
-        console.log(res.items)
-        res.items.forEach(item=>console.log(item.title))
-        makeHtml(res);
-      })
+      //.then(res=>makeHtml(res))
+      .then(makeHtml)
       .catch(error=>console.error('오류 : ',error));
-  });
+  }
 
   function makeHtml(res){
-    res.items.forEach(article=>console.log(article.title,article.link,article.pubDate,article.description));
     const $tbody = document.querySelector('tbody');
     let html = '';
     res.items.forEach(article=>{
        html += `<tr>
-                  <td>${article.title}</td>
-                  <td><a href='${article.link}'>원문</a></td>
+                  <td><a href='${article.originallink}' target='blank'>${article.title}</a></td>
                   <td>${article.description}</td>
                   <td>${chageDateTime(article.pubDate)}</td>
                  </tr>`;

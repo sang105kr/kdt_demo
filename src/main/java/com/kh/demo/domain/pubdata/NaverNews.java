@@ -29,10 +29,10 @@ public class NaverNews {
             .build();
   }
 
-  public String reqNews(String keyword){
+  public String reqNews(String keyword,int start, int display){
     final String query = keyword; //"LG화학";
-    final int display = 10;
-    final int start = 1;
+ //   final int display = 10;
+//    final int start = 1;
 
     // http get 요청하면 http 응답메시지 수신
     Mono<String> response = webClient.get()

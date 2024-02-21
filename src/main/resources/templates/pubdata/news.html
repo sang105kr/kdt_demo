@@ -5,9 +5,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>뉴스검색</title>
+  <style>
+    .active {
+      color: red;
+    }
+    .wrap {
+      display:flex;
+      flex-direction:column;
+      justify-content: center;
+      justify-items: center;
+    }
+    table {
+      width: 100%; /* 테이블 전체 폭을 100%로 설정 */
+      table-layout: fixed; /* 테이블 레이아웃을 고정으로 설정 */
+      border-collapse: collapse;
+      font-family: Arial, sans-serif;
+    }
+    /* 테이블 헤더 스타일 */
+    thead {
+        background-color: #f8f8f8;
+    }
+
+    .col {
+      border: 1px solid #ddd;
+      padding: 5px;
+    }
+
+    .col.col1{
+      width:300px;
+    }
+    .col.col2{
+      width:auto;
+    }
+    .col.col3{
+      width:200px;
+    }
+
+    /* 테이블 헤더 글자 스타일 */
+    th {
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* 테이블 본문 글자 스타일 */
+    td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* 테이블 본문 줄 스타일 (짝수 줄 배경색) */
+    tbody tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    /* 마지막 테이블 줄 스타일 (하단 경계선 제거) */
+    tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+    #pagination {
+      display:flex;
+      justify-content : center;
+      margin: 10px 0;
+      width:100%;
+    }
+  </style>
 </head>
 <body>
 <h3>뉴스검색</h3>
+<div class="wrap">
 <div>
   <form action="/pubdata/news/search" method="GET">
     <label for="search">검색어</label>
@@ -21,9 +89,9 @@
   <table>
     <thead>
       <tr>
-        <th>제목</th>
-        <th>요약</th>
-        <th>작성일</th>
+        <th class="col col1">제목</th>
+        <th class="col col2">요약</th>
+        <th class="col col3">작성일</th>
       </tr>
     </thead>
     <tbody>
@@ -36,17 +104,26 @@
     </tbody>
   </table>
 </div>
-<script>
+<div id="pagination"></div>
+</div>
+<script type="module">
+  import {Pagination,chageDateTime} from '/js/common.js';
+
+  //페이징 객체 생성
+  const pagination = new Pagination(10, 10); // 레코드건수,페이지수
+
   search.addEventListener('keydown',evt=>{
     evt.preventDefault();
     if(evt.key !== 'Enter') return;
-    callNaverApi(evt);
+    callNaverApi(1);
   });
-  searchBtn.addEventListener('click',callNaverApi);
 
-  function callNaverApi(evt){
+  searchBtn.addEventListener('click',evt=>callNaverApi(1));
+
+  function callNaverApi(start=1){
     const keyword = search.value;
-    const url = `/pubdata/news/search?keyword=${keyword}`;
+    const display = pagination.pagesPerPage
+    const url = `/pubdata/news/search?keyword=${keyword}&start=${start}&display=${display}`;
     const option = {
       method : 'GET',
     };
@@ -66,33 +143,16 @@
     const $tbody = document.querySelector('tbody');
     let html = '';
     res.items.forEach(article=>{
-       html += `<tr>
+       html += `<tr class='row'>
                   <td><a href='${article.originallink}' target='blank'>${article.title}</a></td>
                   <td>${article.description}</td>
                   <td>${chageDateTime(article.pubDate)}</td>
                  </tr>`;
     });
     $tbody.innerHTML = html;
-  }
-
-  function chageDateTime(dt){
-      // 주어진 날짜 문자열을 Date 객체로 변환
-    const date = new Date(dt);
-
-    // 필요한 날짜 및 시간 요소를 추출
-    const year = date.getFullYear();
-    const month = date.getMonth() + 1; // getMonth() 함수는 0부터 11까지의 값을 반환하므로 1을 더해줍니다.
-    const day = date.getDate();
-    let hour = date.getHours();
-    const ampm = hour >= 12 ? 'pm' : 'am';
-
-    // 12시간제로 변환
-    hour = hour % 12;
-    hour = hour ? hour : 12; // 0시를 12시로 변환
-
-    // 원하는 형식으로 날짜 및 시간 문자열을 조합
-    const dateString = year + '-' + month + '-' + day + ' ' + ampm + ' ' + hour + ':00';
-    return dateString;
+    //총건수는 초기 1회만
+    if(!pagination.getTotalRecords()) pagination.setTotalRecords(res.total);
+    pagination.displayPagination(callNaverApi);
   }
 </script>
 </body>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>주가시세조회</title>
+</head>
+<body>
+<h3>주가시세조회</h3>
+<script>
+  const itmsNm = 'SK하이닉스';
+  const beginBasDt = '20240201';
+  const endBasDt = '20240221';
+  const url = `/pubdata/stocks/search?itmsNm=${itmsNm}&beginBasDt=${beginBasDt}&endBasDt=${endBasDt}`;
+  const option = {
+    method : 'GET',
+  };
+  fetch(url,option)
+    .then(res=>{
+      if(!res.ok) {
+        throw new Error('응답오류발생');
+      }
+      return res.json();   //응답메시지 바디를 읽어서 json포맷문자열=>js객체로 변환
+    })
+    //.then(res=>makeHtml(res))
+    .then(res=>console.log(res))
+    .catch(error=>console.error('오류 : ',error));
+</script>
+</body>
+</html>

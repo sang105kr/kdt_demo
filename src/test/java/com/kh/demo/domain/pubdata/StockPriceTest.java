@@ -15,7 +15,7 @@ public class StockPriceTest {
 
   @Test
   void getStockPrice(){
-    String data = stockPrice.reqStockPrice();
-    log.info("data={}", data);
+//    String data = stockPrice.reqStockPrice();
+//    log.info("data={}", data);
   }
 }

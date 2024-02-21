@@ -14,9 +14,9 @@ public class StockPrice {
   private final String numOfRows = "20";
   private final String pageNo = "1";
   private final String resultType = "json";
-  private final String itmsNm = "SK하이닉스";
-  private final String beginBasDt = "20240201";
-  private final String endBasDt = "20240221";
+//  private final String itmsNm = "SK하이닉스";
+//  private final String beginBasDt = "20240201";
+//  private final String endBasDt = "20240221";
 
   @Autowired
   public StockPrice(WebClient.Builder webClientBilder){
@@ -31,7 +31,7 @@ public class StockPrice {
             .build();
   }
 
-  public String reqStockPrice(){
+  public String reqStockPrice(String itmsNm,String beginBasDt,String endBasDt ){
 
     // http get 요청하면 http 응답메시지 수신
     Mono<String> response = webClient.get()

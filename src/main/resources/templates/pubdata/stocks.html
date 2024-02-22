@@ -1,31 +1,98 @@
 <!DOCTYPE html>
-<html lang="ko"
-      xmlns:th="http://www.thymeleaf.org">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>주가시세조회</title>
-</head>
-<body>
-<h3>주가시세조회</h3>
-<script>
-  const itmsNm = 'SK하이닉스';
-  const beginBasDt = '20240201';
-  const endBasDt = '20240221';
-  const url = `/pubdata/stocks/search?itmsNm=${itmsNm}&beginBasDt=${beginBasDt}&endBasDt=${endBasDt}`;
-  const option = {
-    method : 'GET',
-  };
-  fetch(url,option)
-    .then(res=>{
-      if(!res.ok) {
-        throw new Error('응답오류발생');
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>주가시세조회</title>
+    <link rel="stylesheet" href="/css/pubdata/stocks.css" />
+  </head>
+  <body>
+    <h3>주가시세조회</h3>
+    <form id="stockForm">
+      <label for="itmsNm">주식종목명:</label>
+      <input type="text" id="itmsNm" name="itmsNm" required />
+
+      <label for="beginBasDt">시작일:</label>
+      <input type="date" id="beginBasDt" name="beginBasDt" required />
+
+      <label for="endBasDt">종료일:</label>
+      <input type="date" id="endBasDt" name="endBasDt" required />
+
+      <button type="button" id="searchBtn">조회</button>
+    </form>
+    <table>
+      <thead>
+        <tr>
+          <th>기준일자</th>
+          <th>시가</th>
+          <th>저가</th>
+          <th>고가</th>
+          <th>종가</th>
+          <th>대비</th>
+          <th>등락률</th>
+          <th>거래대금</th>
+          <th>거래량</th>
+          <th>종목명</th>
+          <th>시장구분</th>
+          <th>ISIN코드</th>
+          <th>단축코드</th>
+          <th>상장주식수</th>
+          <th>시가총액</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2024-02-22</td>
+          <td>10000</td>
+          <td>9800</td>
+          <td>10200</td>
+          <td>10150</td>
+          <td>+50</td>
+          <td>0.49%</td>
+          <td>50000000</td>
+          <td>10000</td>
+          <td>주식1</td>
+          <td>코스피</td>
+          <td>KR1234567890</td>
+          <td>123456</td>
+          <td>1000000</td>
+          <td>10000000000</td>
+        </tr>
+        <!-- 추가적인 샘플 데이터를 필요에 따라 여기에 추가할 수 있습니다. -->
+      </tbody>
+    </table>
+    <script type="module">
+      import {formatDate} from '/js/common.js'
+      //오늘
+      const today = new Date(); 
+      //시작일
+      beginBasDt.value  = formatDate(new Date(today.getFullYear(),today.getMonth(),1));
+      //종료일
+      endBasDt.value  = formatDate(today); 
+
+      searchBtn.addEventListener('click',evt=>callStockApi());
+
+      function callStockApi(){
+        console.log(itmsNm.value, beginBasDt.value, endBasDt.value)
+        console.log(itmsNm.value, beginBasDt.value.split('-').join(''), endBasDt.value.split('-').join(''))        
+        const itmsNm = 'SK하이닉스';
+        const beginBasDt = '20240201';
+        const endBasDt = '20240221';
+        const url = `/pubdata/stocks/search?itmsNm=${itmsNm}&beginBasDt=${beginBasDt}&endBasDt=${endBasDt}`;
+        const option = {
+          method : 'GET',
+        };
+        fetch(url,option)
+          .then(res=>{
+            if(!res.ok) {
+              throw new Error('응답오류발생');
+            }
+            return res.json();   //응답메시지 바디를 읽어서 json포맷문자열=>js객체로 변환
+          })
+          .then(res=>makeHtml(res))
+          //.then(res=>console.log(res))
+          .catch(error=>console.error('오류 : ',error));
       }
-      return res.json();   //응답메시지 바디를 읽어서 json포맷문자열=>js객체로 변환
-    })
-    //.then(res=>makeHtml(res))
-    .then(res=>console.log(res))
-    .catch(error=>console.error('오류 : ',error));
-</script>
-</body>
+    </script>
+  </body>
 </html>

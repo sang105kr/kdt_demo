@@ -10,7 +10,7 @@ public class StockPrice {
   private final WebClient webClient;
   private String baseUrl = "https://apis.data.go.kr";
   //파라미터
-  private final String serviceKey = "CryKKi6HaVVnP0WXU4sIp8dcrZgn2wui0UPEU%2BeivronhsULZ8SFW3qxmqgGmyqgpj59gqzMmd8H%2BhWEzjcvBw%3D%3D";
+  private String serviceKey = "CryKKi6HaVVnP0WXU4sIp8dcrZgn2wui0UPEU%2BeivronhsULZ8SFW3qxmqgGmyqgpj59gqzMmd8H%2BhWEzjcvBw%3D%3D";
   private final String numOfRows = "20";
   private final String pageNo = "1";
   private final String resultType = "json";
@@ -22,7 +22,7 @@ public class StockPrice {
   public StockPrice(WebClient.Builder webClientBilder){
 
 //    DefaultUriBuilderFactory factory = new DefaultUriBuilderFactory(baseUrl);
-//    factory.setEncodingMode(DefaultUriBuilderFactory.EncodingMode.NONE);
+//    factory.setEncodingMode(DefaultUriBuilderFactory.EncodingMode.V);
 
     this.webClient = webClientBilder
 //            .uriBuilderFactory(factory)
@@ -36,7 +36,7 @@ public class StockPrice {
     // http get 요청하면 http 응답메시지 수신
     Mono<String> response = webClient.get()
             .uri(uriBuilder -> uriBuilder
-                    .path("/1160100/service/GetStockSecuritiesInfoService/getStockPriceInfo")                 //베이스url 이하 경로
+                    .path("/1160100/service/GetStockSecuritiesInfoService/getStockPriceInfo") //베이스url 이하 경로
                     .queryParam("serviceKey",serviceKey)
                     .queryParam("numOfRows",numOfRows)
                     .queryParam("pageNo",pageNo)

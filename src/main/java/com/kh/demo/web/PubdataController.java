@@ -58,6 +58,7 @@ public class PubdataController {
   ){
     String data = stockPrice.reqStockPrice(itmsNm,beginBasDt,endBasDt);
     log.info("itmsNm={},beginBasDt={},endBasDt={}",itmsNm,beginBasDt,endBasDt);
+    log.info("data={}", data);
     return data;
   }
 }

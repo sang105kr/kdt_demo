@@ -15,7 +15,10 @@ public class StockPriceTest {
 
   @Test
   void getStockPrice(){
-//    String data = stockPrice.reqStockPrice();
-//    log.info("data={}", data);
+    String itmsNm = "SK하이닉스";
+    String beginBasDt = "20240201";
+    String endBasDt = "20240221";
+    String data = stockPrice.reqStockPrice(itmsNm,beginBasDt,endBasDt);
+    log.info("data={}", data);
   }
 }

@@ -66,7 +66,7 @@
     <div id="pagination"></div>    
 
     <script type="module">
-      import {Pagination,formatDate} from '/js/common.js'
+      import {Pagination,formatDate,addCommasToNumberString} from '/js/common.js'
 
       //페이징 객체 생성
       const pagination = new Pagination(10, 10); // 한페이지에 보여줄 레코드건수,한페이지에 보여줄 페이지수
@@ -125,21 +125,21 @@
 
           items.forEach(item=>{
             html += `<tr>`;
-            html += `  <td>${item.basDt}</td>`;
-            html += `  <td>${item.mkp}</td>`;
-            html += `  <td>${item.lopr}</td>`;
-            html += `  <td>${item.hipr}</td>`;
-            html += `  <td>${item.clpr}</td>`;
-            html += `  <td>${item.vs}</td>`;
-            html += `  <td>${item.fltRt}</td>`;
-            html += `  <td>${item.trPrc}</td>`;
-            html += `  <td>${item.trqu}</td>`;
-            html += `  <td>${item.itmsNm}</td>`;
-            html += `  <td>${item.mrktCtg}</td>`;
-            html += `  <td>${item.isinCd}</td>`;
-            html += `  <td>${item.srtnCd}</td>`;
-            html += `  <td>${item.lstgStCnt}</td>`;
-            html += `  <td>${item.mrktTotAmt}</td>`;
+            html += `  <td class="cell str">${item.basDt}</td>`;
+            html += `  <td class="cell num">${addCommasToNumberString(item.mkp)}</td>`;
+            html += `  <td class="cell num">${addCommasToNumberString(item.lopr)}</td>`;
+            html += `  <td class="cell num">${addCommasToNumberString(item.hipr)}</td>`;
+            html += `  <td class="cell num">${addCommasToNumberString(item.clpr)}</td>`;
+            html += `  <td class="cell num">${addCommasToNumberString(item.vs)}</td>`;
+            html += `  <td class="cell num">${item.fltRt}</td>`;
+            html += `  <td class="cell num">${addCommasToNumberString(item.trPrc)}</td>`;
+            html += `  <td class="cell num">${addCommasToNumberString(item.trqu)}</td>`;
+            html += `  <td class="cell str">${item.itmsNm}</td>`;
+            html += `  <td class="cell str">${item.mrktCtg}</td>`;
+            html += `  <td class="cell str">${item.isinCd}</td>`;
+            html += `  <td class="cell str">${item.srtnCd}</td>`;
+            html += `  <td class="cell num">${addCommasToNumberString(item.lstgStCnt)}</td>`;
+            html += `  <td class="cell num">${addCommasToNumberString(item.mrktTotAmt)}</td>`;
             html += `</tr>`;
           });
         }

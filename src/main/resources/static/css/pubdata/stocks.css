@@ -32,3 +32,7 @@ tbody tr:hover {
     background-color: #e0e0e0;
 }
 
+/* 숫자는 오른쪽, 문자는 왼쪽정렬 */
+.cell.num {text-align: right;}
+.cell.str {text-align: left;}
+

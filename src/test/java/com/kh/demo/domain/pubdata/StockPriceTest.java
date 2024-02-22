@@ -18,7 +18,9 @@ public class StockPriceTest {
     String itmsNm = "SK하이닉스";
     String beginBasDt = "20240201";
     String endBasDt = "20240221";
-    String data = stockPrice.reqStockPrice(itmsNm,beginBasDt,endBasDt);
+    int numOfRows = 20; // 한페이지에 보여줄 레코드수
+    int pageNo = 1;     // 요청페이지
+    String data = stockPrice.reqStockPrice(itmsNm,beginBasDt,endBasDt,numOfRows,pageNo);
     log.info("data={}", data);
   }
 }

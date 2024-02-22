@@ -10,13 +10,13 @@
     <h3>주가시세조회</h3>
     <form id="stockForm">
       <label for="itmsNm">주식종목명:</label>
-      <input type="text" id="itmsNm" name="itmsNm" required />
+      <input type="text" id="itmsNm" name="itmsNm" />
 
       <label for="beginBasDt">시작일:</label>
-      <input type="date" id="beginBasDt" name="beginBasDt" required />
+      <input type="date" id="beginBasDt" name="beginBasDt" />
 
       <label for="endBasDt">종료일:</label>
-      <input type="date" id="endBasDt" name="endBasDt" required />
+      <input type="date" id="endBasDt" name="endBasDt" />
 
       <button type="button" id="searchBtn">조회</button>
     </form>
@@ -66,22 +66,25 @@
       //오늘
       const today = new Date(); 
       //시작일
-      beginBasDt.value  = formatDate(new Date(today.getFullYear(),today.getMonth(),1));
+      beginBasDt.value  = formatDate(new Date(today.getFullYear(),today.getMonth(),1)); // yyyy-mm-dd
       //종료일
-      endBasDt.value  = formatDate(today); 
+      endBasDt.value  = formatDate(today); // yyyy-mm-dd
 
       searchBtn.addEventListener('click',evt=>callStockApi());
 
-      function callStockApi(){
-        console.log(itmsNm.value, beginBasDt.value, endBasDt.value)
-        console.log(itmsNm.value, beginBasDt.value.split('-').join(''), endBasDt.value.split('-').join(''))        
-        const itmsNm = 'SK하이닉스';
-        const beginBasDt = '20240201';
-        const endBasDt = '20240221';
-        const url = `/pubdata/stocks/search?itmsNm=${itmsNm}&beginBasDt=${beginBasDt}&endBasDt=${endBasDt}`;
+      function callStockApi(){      
+        //종목명
+        const _itmsNm = itmsNm.value;
+        //시작일
+        const _beginBasDt = beginBasDt.value.split('-').join('');
+        //종료일
+        const _endBasDt = endBasDt.value.split('-').join('');
+
+        const url = `/pubdata/stocks/search?itmsNm=${_itmsNm}&beginBasDt=${_beginBasDt}&endBasDt=${_endBasDt}`;
         const option = {
           method : 'GET',
         };
+
         fetch(url,option)
           .then(res=>{
             if(!res.ok) {
@@ -89,8 +92,8 @@
             }
             return res.json();   //응답메시지 바디를 읽어서 json포맷문자열=>js객체로 변환
           })
-          .then(res=>makeHtml(res))
-          //.then(res=>console.log(res))
+          // .then(res=>makeHtml(res))
+          .then(res=>console.log(res))
           .catch(error=>console.error('오류 : ',error));
       }
     </script>

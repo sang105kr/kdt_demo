@@ -10,7 +10,7 @@ public class StockPrice {
   private final WebClient webClient;
   private String baseUrl = "https://apis.data.go.kr";
   //파라미터
-  private String serviceKey = "CryKKi6HaVVnP0WXU4sIp8dcrZgn2wui0UPEU%2BeivronhsULZ8SFW3qxmqgGmyqgpj59gqzMmd8H%2BhWEzjcvBw%3D%3D";
+  private String serviceKey = "CryKKi6HaVVnP0WXU4sIp8dcrZgn2wui0UPEU+eivronhsULZ8SFW3qxmqgGmyqgpj59gqzMmd8H+hWEzjcvBw==";
   private final String numOfRows = "20";
   private final String pageNo = "1";
   private final String resultType = "json";
@@ -22,7 +22,7 @@ public class StockPrice {
   public StockPrice(WebClient.Builder webClientBilder){
 
 //    DefaultUriBuilderFactory factory = new DefaultUriBuilderFactory(baseUrl);
-//    factory.setEncodingMode(DefaultUriBuilderFactory.EncodingMode.V);
+//    factory.setEncodingMode(DefaultUriBuilderFactory.EncodingMode.NONE);
 
     this.webClient = webClientBilder
 //            .uriBuilderFactory(factory)

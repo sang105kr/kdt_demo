@@ -123,9 +123,11 @@
 
   searchBtn.addEventListener('click',evt=>callNaverApi(1));
 
-  function callNaverApi(start=1){
+  function callNaverApi(){
     const keyword = search.value;
     const display = pagination.recordsPerPage;
+    const start = pagination.currentPage;
+    
     const url = `/pubdata/news/search?keyword=${keyword}&start=${start}&display=${display}`;
     const option = {
       method : 'GET',

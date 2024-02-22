@@ -54,10 +54,12 @@ public class PubdataController {
   public String searchStocks(
           @RequestParam("itmsNm") String itmsNm,          //종목명
           @RequestParam("beginBasDt") String beginBasDt,  //시작일
-          @RequestParam("endBasDt") String endBasDt       //종료일
+          @RequestParam("endBasDt") String endBasDt,       //종료일
+          @RequestParam("numOfRows") int numOfRows,       //레코드수
+          @RequestParam("pageNo") int pageNo              //요청페이지
   ){
-    String data = stockPrice.reqStockPrice(itmsNm,beginBasDt,endBasDt);
-    log.info("itmsNm={},beginBasDt={},endBasDt={}",itmsNm,beginBasDt,endBasDt);
+    String data = stockPrice.reqStockPrice(itmsNm,beginBasDt,endBasDt,numOfRows,pageNo);
+    log.info("itmsNm={},beginBasDt={},endBasDt={},numOfRows={},pageNo={}",itmsNm,beginBasDt,endBasDt,numOfRows,pageNo);
     log.info("data={}", data);
     return data;
   }

@@ -10,9 +10,9 @@ public class StockPrice {
   private final WebClient webClient;
   private String baseUrl = "https://apis.data.go.kr";
   //파라미터
-  private String serviceKey = "CryKKi6HaVVnP0WXU4sIp8dcrZgn2wui0UPEU+eivronhsULZ8SFW3qxmqgGmyqgpj59gqzMmd8H+hWEzjcvBw==";
-  private final String numOfRows = "20";
-  private final String pageNo = "1";
+  private String serviceKey = "CryKKi6HaVVnP0WXU4sIp8dcrZgn2wui0UPEU%2BeivronhsULZ8SFW3qxmqgGmyqgpj59gqzMmd8H%2BhWEzjcvBw%3D%3D";
+//  private final String numOfRows = "20"; // 한페이지에 보여줄 레코드수
+//  private final String pageNo = "1";     // 요청페이지
   private final String resultType = "json";
 //  private final String itmsNm = "SK하이닉스";
 //  private final String beginBasDt = "20240201";
@@ -31,7 +31,7 @@ public class StockPrice {
             .build();
   }
 
-  public String reqStockPrice(String itmsNm,String beginBasDt,String endBasDt ){
+  public String reqStockPrice(String itmsNm,String beginBasDt,String endBasDt, int numOfRows, int pageNo ){
 
     // http get 요청하면 http 응답메시지 수신
     Mono<String> response = webClient.get()

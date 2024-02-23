@@ -5,6 +5,7 @@ import com.kh.demo.domain.entity.Product;
 import com.kh.demo.domain.product.svc.ProductSVC;
 import com.kh.demo.web.api.ApiResponse;
 import com.kh.demo.web.req.product.ReqSave;
+import com.kh.demo.web.req.product.ResSave;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
@@ -37,9 +38,13 @@ public class ApiProductController {
 //    product.setPrice(reqSave.getPrice());
     Product product = new Product();
     BeanUtils.copyProperties(reqSave,product);
-    productSVC.save(product);
+    Long productId = productSVC.save(product);
 
-    ApiResponse<?> res = ApiResponse.createApiResponse("00","성공",product);
+    ResSave resSave = new ResSave(productId,reqSave.getPname());
+
+    String rtDetail = "상품번호 " + productId + " 가 등록 되었습니다";
+    ApiResponse<ResSave> res = ApiResponse.createApiResponseDetail(
+            ResCode.OK.getCode(), ResCode.OK.name(), rtDetail, resSave);
     return res;
   }
   //조회

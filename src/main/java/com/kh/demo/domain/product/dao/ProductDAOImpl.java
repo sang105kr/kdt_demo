@@ -126,4 +126,15 @@ public class ProductDAOImpl implements ProductDAO{
 
     return list;
   }
+
+  //총레코드 건수
+  @Override
+  public int totalCnt() {
+    String sql = "SELECT COUNT(product_id) FROM product ";
+
+    SqlParameterSource param = new MapSqlParameterSource();
+    Integer cnt = template.queryForObject(sql, param, Integer.class);
+
+    return cnt;
+  }
 }

@@ -5,12 +5,15 @@ import com.kh.demo.domain.entity.Product;
 import com.kh.demo.domain.product.svc.ProductSVC;
 import com.kh.demo.web.api.ApiResponse;
 import com.kh.demo.web.req.product.ReqSave;
+import com.kh.demo.web.req.product.ResFindById;
 import com.kh.demo.web.req.product.ResSave;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
 
 @Slf4j
 @Controller
@@ -50,8 +53,25 @@ public class ApiProductController {
   //조회
   @ResponseBody
   @GetMapping("/{pid}")
-  public void findById(){
+  public ApiResponse<ResFindById> findById(@PathVariable("pid") Long pid){
+    log.info("pid={}", pid);
+    Optional<Product> optionalProduct = productSVC.findById(pid);
 
+    ApiResponse<ResFindById> res = null;
+    //상품을 찾은경우
+    if(optionalProduct.isPresent()){
+      Product findedPorudct = optionalProduct.get();
+
+      ResFindById resFindById = new ResFindById();
+      BeanUtils.copyProperties(findedPorudct,resFindById);
+
+      res = ApiResponse.createApiResponse(ResCode.OK.getCode(), ResCode.OK.name(),resFindById );
+    //상품을 못찾은경우
+    }else{
+      String rtDetail = "상품번호 : " + pid + " 찾고자하는 상품정보가 없습니다.";
+      res = ApiResponse.createApiResponseDetail(ResCode.FAIL.getCode(), ResCode.FAIL.name(),rtDetail,null );
+    }
+    return res;
   }
   //수정
   @ResponseBody

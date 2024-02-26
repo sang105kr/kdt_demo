@@ -2,14 +2,13 @@ let  $productList = '';  // 목록 엘리먼트를 타겟
 renderHTML();
 function renderHTML(){
   const $div = document.createElement('div');  
-  $div.innerHTML = 
-    `<div>
+  $div.innerHTML = `<div>
       <form id='frm'>
         <h3> 상품등록 </h3>
         <div>
-          <label for="productId">상품명</label>
-          <input id='productId' name='productId' type="text">
-        </div>
+          <label for="pname">상품명</label>
+          <input id='pname' name='pname' type="text">
+        </div>        
         <div>
           <label for="quantity">수량</label>
           <input id='quantity' name='quantity' type="text">
@@ -27,6 +26,13 @@ function renderHTML(){
   const $addBtn = $div.querySelector('#addBtn');
   $addBtn.addEventListener('click',evt=>{
     console.log('등록');
+    const formData = new FormData($div.querySelector('#frm'));
+    const product = {
+      pname : formData.get('pname'),
+      quantity : formData.get('quantity'),
+      price : formData.get('price')
+    }
+    add(product);
   });
   
   $productList = $div.querySelector('#productList');
@@ -48,16 +54,15 @@ async function list() {
     const result = await res.json(); //응답메세지 바디를 읽어 json포맷 문자열=>js객체
     if(result.header.rtcd == '00'){
       console.log(result.body);
-      let $rowHTML = '';
-      result.body.forEach(item=>{
-        $rowHTML += `<div>
-                      <span>${item.productId}</span>
-                      <span>${item.pname}</span>
-                      <span>${item.quantity}</span>
-                      <span>${item.price}</span> 
-                    </div>`;
-      });
-      $productList.innerHTML = $rowHTML;
+      const str = result.body.map(item=>
+                                    `<div>
+                                      <span>${item.productId}</span>
+                                      <span>${item.pname}</span>
+                                      <span>${item.quantity}</span>
+                                      <span>${item.price}</span> 
+                                    </div>`).join('');
+
+      $productList.innerHTML = str;
     }else{
       new Error('목록 실패!');
     }
@@ -84,6 +89,7 @@ async function add(product) {
     const result = await res.json(); //응답메세지 바디를 읽어 json포맷 문자열=>js객체
     if (result.header.rtcd == '00') {
       console.log(result.body);
+      list();
     } else {
       new Error('등록 실패!');
     }

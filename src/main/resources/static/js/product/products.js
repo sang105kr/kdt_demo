@@ -37,16 +37,14 @@ function renderHTML(){
     add(product);
   });
 
-  $div.style.position = 'relative';
-
   //상품목록
   $productList = $div.querySelector('#productList');
 
   //로딩 이미지
   $loaddingImg = $div.querySelector('#loadding');
   $loaddingImg.style.position = 'absolute';
-  $loaddingImg.style.top = '10%';
-  $loaddingImg.style.left = '50%';
+  $loaddingImg.style.top = '50vh';
+  $loaddingImg.style.left = '50vw';
   $loaddingImg.style.transform = 'translate(-50%,-50%)';
   $loaddingImg.style.display = 'none';
   list();

@@ -1,3 +1,4 @@
+let  $productList = '';  // 목록 엘리먼트를 타겟
 renderHTML();
 function renderHTML(){
   const $div = document.createElement('div');  
@@ -27,8 +28,9 @@ function renderHTML(){
   $addBtn.addEventListener('click',evt=>{
     console.log('등록');
   });
-  const $productList = $div.querySelector('#productList');
-  list($productList);
+  
+  $productList = $div.querySelector('#productList');
+  list();
 }
 
 //목록
@@ -46,6 +48,16 @@ async function list() {
     const result = await res.json(); //응답메세지 바디를 읽어 json포맷 문자열=>js객체
     if(result.header.rtcd == '00'){
       console.log(result.body);
+      let $rowHTML = '';
+      result.body.forEach(item=>{
+        $rowHTML += `<div>
+                      <span>${item.productId}</span>
+                      <span>${item.pname}</span>
+                      <span>${item.quantity}</span>
+                      <span>${item.price}</span> 
+                    </div>`;
+      });
+      $productList.innerHTML = $rowHTML;
     }else{
       new Error('목록 실패!');
     }

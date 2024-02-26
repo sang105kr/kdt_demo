@@ -30,7 +30,7 @@ public class ApiProductController {
           @RequestBody ReqSave reqSave
   ){
     log.info("reqSave={}", reqSave);
-    
+
     //1)유효성검증
     
     //2)상품등록처리
@@ -119,6 +119,13 @@ public class ApiProductController {
 //  @ResponseBody
   @GetMapping
   public ApiResponse<?> list(){
+
+    try {
+      Thread.sleep(3000); //3초 지연
+    }catch (InterruptedException e) {
+      throw new RuntimeException(e);
+    }
+
     List<Product> list = productSVC.findAll();
 
     ApiResponse<List<Product>> res = null;

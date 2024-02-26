@@ -1,4 +1,5 @@
 let  $productList = '';  // 목록 엘리먼트를 타겟
+let  $loaddingImg = '';  // 로딩 이미지
 renderHTML();
 function renderHTML(){
   const $div = document.createElement('div');  
@@ -21,6 +22,7 @@ function renderHTML(){
       </form>
      </div>  
      <div id='productList'></div>
+     <img id='loadding' src='/img/loadding.svg'>
     `;
   document.body.appendChild($div);  
   const $addBtn = $div.querySelector('#addBtn');
@@ -34,13 +36,25 @@ function renderHTML(){
     }
     add(product);
   });
-  
+
+  $div.style.position = 'relative';
+
+  //상품목록
   $productList = $div.querySelector('#productList');
+
+  //로딩 이미지
+  $loaddingImg = $div.querySelector('#loadding');
+  $loaddingImg.style.position = 'absolute';
+  $loaddingImg.style.top = '10%';
+  $loaddingImg.style.left = '50%';
+  $loaddingImg.style.transform = 'translate(-50%,-50%)';
+  $loaddingImg.style.display = 'none';
   list();
 }
 
 //목록
 async function list() {
+  $loaddingImg.style.display = 'block';
   const url = `http://localhost:9080/api/products`;
   const option = {
     method:'GET',
@@ -68,6 +82,8 @@ async function list() {
     }
   }catch(err){
     console.error(err.message);
+  }finally{
+    $loaddingImg.style.display = 'none';
   }
 }
 // list();

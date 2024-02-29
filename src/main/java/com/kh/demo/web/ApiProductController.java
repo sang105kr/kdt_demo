@@ -121,7 +121,7 @@ public class ApiProductController {
   public ApiResponse<?> list(){
 
     try {
-      Thread.sleep(3000); //3초 지연
+      Thread.sleep(1000*3); // 1000이 1초
     }catch (InterruptedException e) {
       throw new RuntimeException(e);
     }

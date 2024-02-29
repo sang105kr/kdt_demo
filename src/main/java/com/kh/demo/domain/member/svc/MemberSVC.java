@@ -2,6 +2,8 @@ package com.kh.demo.domain.member.svc;
 
 import com.kh.demo.domain.entity.Member;
 
+import java.util.Optional;
+
 public interface MemberSVC {
   //회원가입
   Long joinMember(Member member);
@@ -10,6 +12,7 @@ public interface MemberSVC {
   boolean existMemberId(String email);
 
   //회원조회
+  Optional<Member> findByEmailAndPasswd(String email, String passwd);
 
   //회원수정
 

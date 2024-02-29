@@ -6,6 +6,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Slf4j
 @Service
 @RequiredArgsConstructor
@@ -27,5 +29,10 @@ public class MemberSVCImpl implements MemberSVC{
   @Override
   public boolean existMemberId(String email) {
     return memberDAO.existMemberId(email);
+  }
+
+  @Override
+  public Optional<Member> findByEmailAndPasswd(String email, String passwd) {
+    return memberDAO.findByEmailAndPasswd(email, passwd);
   }
 }

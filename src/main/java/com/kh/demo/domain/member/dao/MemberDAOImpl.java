@@ -4,6 +4,8 @@ import com.kh.demo.domain.entity.Member;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Primary;
+import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
@@ -13,6 +15,7 @@ import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;
 import java.util.Map;
+import java.util.Optional;
 
 @Slf4j
 @Repository
@@ -51,5 +54,21 @@ public class MemberDAOImpl implements MemberDAO{
     Integer cnt = template.queryForObject(sql, param, Integer.class);
 
     return cnt == 1 ? true : false;
+  }
+
+  @Override
+  public Optional<Member> findByEmailAndPasswd(String email, String passwd) {
+    StringBuffer sql = new StringBuffer();
+    sql.append("select * from member ");
+    sql.append(" where email = :email ");
+    sql.append("   and passwd = :passwd ");
+
+    Map param = Map.of("email", email, "passwd", passwd);
+    try {
+      Member member = template.queryForObject(sql.toString(), param, new BeanPropertyRowMapper<>(Member.class));
+      return Optional.of(member);
+    }catch(EmptyResultDataAccessException e){
+      return Optional.empty();
+    }
   }
 }

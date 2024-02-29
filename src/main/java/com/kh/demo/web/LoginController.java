@@ -1,0 +1,55 @@
+package com.kh.demo.web;
+
+import com.kh.demo.domain.entity.Member;
+import com.kh.demo.domain.member.svc.MemberSVC;
+import com.kh.demo.web.form.member.LoginForm;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.Optional;
+
+@Slf4j
+@Controller
+@RequiredArgsConstructor
+public class LoginController {
+
+  private final MemberSVC memberSVC;
+
+  //로그인 양식
+  @GetMapping("/login")
+  public String loginFrom(){
+
+    return "login";
+  }
+  //로그인 처리
+  @PostMapping("/login")
+  public String login(LoginForm loginForm, HttpServletRequest request){
+    log.info("loginForm={}", loginForm);
+    //1) 유효성 체크
+
+    //2) 회원 유무 체크
+    //2-1)회원 아이디 존재 유무 체크
+    if(memberSVC.existMemberId(loginForm.getEmail())){
+
+      Optional<Member> optionalMember = memberSVC.findByEmailAndPasswd(loginForm.getEmail(), loginForm.getPasswd());
+      //3) 회원인경우 회원 정보를 세션에 저장
+      if(optionalMember.isPresent()){
+        //세션 생성
+        HttpSession session = request.getSession(true);
+        //회원 정보를 세션에 저장
+        session.setAttribute("member",optionalMember.get());
+      }else{
+        //회원정보가 없는경우
+        return "login";
+      }
+    }else{
+      return "login";
+    };
+    return "redirect:/";
+  }
+}

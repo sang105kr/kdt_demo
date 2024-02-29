@@ -14,12 +14,13 @@ public class MemberSVCImpl implements MemberSVC{
   private final MemberDAO memberDAO;
 
 //  @Autowired
-//  public MemberSVCImpl(MemberDAO memberDAO) {
+//  public MemberSVCImpl(@Qualifier("memberDAOImpl2") MemberDAO memberDAO) {
 //    this.memberDAO = memberDAO;
+//    log.info("memberDAO={}", memberDAO.getClass().getName());
 //  }
 
   @Override
-  public Long joinMeber(Member member) {
+  public Long joinMember(Member member) {
     return memberDAO.inserMember(member);
   }
 }

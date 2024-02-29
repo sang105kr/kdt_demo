@@ -3,6 +3,7 @@ package com.kh.demo.domain.member.dao;
 import com.kh.demo.domain.entity.Member;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.context.annotation.Primary;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
@@ -13,7 +14,8 @@ import org.springframework.stereotype.Repository;
 import java.math.BigDecimal;
 
 @Slf4j
-@Repository("memberDAOImpl")
+@Repository
+@Primary // 동일타입의 객체가 2개이상 존재할때 최우선순위로 주입받을수 있도록 설정하는 어노테이션
 @RequiredArgsConstructor
 public class MemberDAOImpl implements MemberDAO{
 

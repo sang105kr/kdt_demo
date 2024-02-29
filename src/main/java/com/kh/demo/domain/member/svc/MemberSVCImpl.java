@@ -23,4 +23,9 @@ public class MemberSVCImpl implements MemberSVC{
   public Long joinMember(Member member) {
     return memberDAO.inserMember(member);
   }
+
+  @Override
+  public boolean existMemberId(String email) {
+    return memberDAO.existMemberId(email);
+  }
 }

@@ -12,6 +12,7 @@ import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;
+import java.util.Map;
 
 @Slf4j
 @Repository
@@ -39,5 +40,16 @@ public class MemberDAOImpl implements MemberDAO{
     Long product_id = ((BigDecimal)keyHolder.getKeys().get("member_id")).longValue();
 
     return product_id;
+  }
+
+  //이메일 존재 유무
+  @Override
+  public boolean existMemberId(String email) {
+    String sql = "select count(email) from member where email = :email ";
+
+    Map param = Map.of("email", email);
+    Integer cnt = template.queryForObject(sql, param, Integer.class);
+
+    return cnt == 1 ? true : false;
   }
 }

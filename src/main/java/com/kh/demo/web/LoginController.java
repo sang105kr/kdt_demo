@@ -10,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.Optional;
 
@@ -22,34 +23,52 @@ public class LoginController {
 
   //로그인 양식
   @GetMapping("/login")
-  public String loginFrom(){
+  public String loginFrom() {
 
     return "login";
   }
+
   //로그인 처리
   @PostMapping("/login")
-  public String login(LoginForm loginForm, HttpServletRequest request){
+  public String login(LoginForm loginForm, HttpServletRequest request) {
     log.info("loginForm={}", loginForm);
     //1) 유효성 체크
 
     //2) 회원 유무 체크
     //2-1)회원 아이디 존재 유무 체크
-    if(memberSVC.existMemberId(loginForm.getEmail())){
+    if (memberSVC.existMemberId(loginForm.getEmail())) {
 
       Optional<Member> optionalMember = memberSVC.findByEmailAndPasswd(loginForm.getEmail(), loginForm.getPasswd());
       //3) 회원인경우 회원 정보를 세션에 저장
-      if(optionalMember.isPresent()){
+      if (optionalMember.isPresent()) {
         //세션 생성
         HttpSession session = request.getSession(true);
         //회원 정보를 세션에 저장
-        session.setAttribute("member",optionalMember.get());
-      }else{
+        session.setAttribute("loginOK", optionalMember.get());
+      } else {
         //회원정보가 없는경우
         return "login";
       }
-    }else{
+    } else {
       return "login";
-    };
+    }
+    ;
     return "redirect:/";
+  }
+  //로그아웃
+  @ResponseBody
+  @PostMapping("/logout")
+  public String logout(HttpServletRequest request) {
+
+    String flag = "NOK";
+    //세션이 있으면 가져오고 없으면 생성하지 않는다.
+    HttpSession session = request.getSession(false);
+    
+    //세션 제거
+    if(session !=null ){
+      session.invalidate();
+      flag ="OK";
+    }
+    return flag;
   }
 }

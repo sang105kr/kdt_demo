@@ -41,7 +41,7 @@ public class LoginController {
       Optional<Member> optionalMember = memberSVC.findByEmailAndPasswd(loginForm.getEmail(), loginForm.getPasswd());
       //3) 회원인경우 회원 정보를 세션에 저장
       if (optionalMember.isPresent()) {
-        //세션 생성
+        //세션 생성  : 세션정보가 있으면 있는 세션정보를 없으면 새로이 생성 getSession(true)
         HttpSession session = request.getSession(true);
         //회원 정보를 세션에 저장
         session.setAttribute("loginOK", optionalMember.get());

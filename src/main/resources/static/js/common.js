@@ -88,7 +88,7 @@ class Pagination {
       document.getElementById('prev').addEventListener('click', evt => {
         if (this.currentPageGroupStart > 1) {
           this.setPrevPageGroup();
-          this.setCurrentPage(this.currentPageGroupStart);
+          this.setCurrentPage(this.currentPageGroupStart+this.recordsPerPage-1);
           callback();
           this.displayPagination(callback);
         }

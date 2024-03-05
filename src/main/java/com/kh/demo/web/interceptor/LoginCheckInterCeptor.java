@@ -20,13 +20,13 @@ public class LoginCheckInterCeptor implements HandlerInterceptor {
     log.info("요청uri={}",requestURI);              // /products/news
     log.info("요청url={}",request.getRequestURL()); // http://localhost:9080/products/news
 
-    //요청 파리미터 정보가 있는 경우 http://localhost:9080/products/news?a=1&b=1
+    //요청 파리미터 정보가 있는 경우 http://localhost:9080/products/news?a=1&b=2
     if(request.getQueryString() != null){
       log.info("요청url getQueryString={}",request.getQueryString());
       //요청파리미터 인코딩
-      String queryString = URLEncoder.encode(request.getQueryString(),"UTF-8");   //aaa=xxx&bbb=yyy
+      String queryString = URLEncoder.encode(request.getQueryString(),"UTF-8");   //a=1&b=2
       StringBuffer str = new StringBuffer();
-      redirectUrl = str.append(requestURI).append("?").append(queryString).toString(); //products?aaa=xxx&bbb=yyy
+      redirectUrl = str.append(requestURI).append("?").append(queryString).toString(); //products?a=1&b=2
       log.info("redirectUrl={}",redirectUrl);
     }else{
     //요청 파리미터 정보가 없는 경우 http://localhost:9080/products/news

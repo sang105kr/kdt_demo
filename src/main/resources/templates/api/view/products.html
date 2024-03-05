@@ -4,6 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .active {
+        color: red;
+    }
+  </style>
 </head>
 <body>
   <script>
@@ -13,6 +18,7 @@
 
     // script 엘리먼트
     const $script = document.createElement('script');
+    $script.type = 'module';
     $script.src = `/js/product/products.js`;
     $script.async = true;
 

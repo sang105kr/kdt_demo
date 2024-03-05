@@ -80,6 +80,7 @@ class Pagination {
       document.getElementById('first').addEventListener('click', evt => {
         this.setCurrentPage(1);
         this.currentPageGroupStart = 1;
+        callback();
         this.displayPagination(callback);
       });
     }
@@ -88,6 +89,7 @@ class Pagination {
         if (this.currentPageGroupStart > 1) {
           this.setPrevPageGroup();
           this.setCurrentPage(this.currentPageGroupStart);
+          callback();
           this.displayPagination(callback);
         }
       });
@@ -100,6 +102,7 @@ class Pagination {
         ) {
           this.setNextPageGroup();
           this.setCurrentPage(this.currentPageGroupStart);
+          callback();
           this.displayPagination(callback);
         }
       });
@@ -110,6 +113,7 @@ class Pagination {
         this.currentPageGroupStart =
           totalPages - (totalPages % this.pagesPerPage) + 1;
         this.setCurrentPage(totalPages);
+        callback();
         this.displayPagination(callback);
       });
     }

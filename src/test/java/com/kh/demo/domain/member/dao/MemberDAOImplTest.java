@@ -39,13 +39,13 @@ public class MemberDAOImplTest {
   @Test
   @DisplayName("이메일(O)")
   void existMemberId(){
-    boolean exit = memberDAO.existMemberId("user1@kh.com");
+    boolean exit = memberDAO.existEmail("user1@kh.com");
     Assertions.assertThat(exit).isEqualTo(true);
   }
   @Test
   @DisplayName("이메일(X)")
   void dontExistMemberId(){
-    boolean exit = memberDAO.existMemberId("zzzz@kh.com");
+    boolean exit = memberDAO.existEmail("zzzz@kh.com");
     Assertions.assertThat(exit).isEqualTo(false);
   }
   @Test

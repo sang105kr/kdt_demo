@@ -40,7 +40,7 @@ public class LoginController {
 
     //2) 회원 유무 체크
     //2-1)회원 아이디 존재 유무 체크
-    if (memberSVC.existMemberId(loginForm.getEmail())) {
+    if (memberSVC.existEmail(loginForm.getEmail())) {
 
       Optional<Member> optionalMember = memberSVC.findByEmailAndPasswd(loginForm.getEmail(), loginForm.getPasswd());
       //3) 회원인경우 회원 정보를 세션에 저장

@@ -12,6 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.Optional;
@@ -31,8 +32,9 @@ public class LoginController {
   }
 
   //로그인 처리
-  @PostMapping("/login")
-  public String login(LoginForm loginForm, HttpServletRequest request) {
+  @PostMapping("/login")     // /login?redirectUrl=사용자가요청한url
+  public String login(LoginForm loginForm, HttpServletRequest request,
+                      @RequestParam(value = "redirectUrl",required = false) String redirectUrl) {
     log.info("loginForm={}", loginForm);
     //1) 유효성 체크
 
@@ -58,9 +60,10 @@ public class LoginController {
     } else {
       return "login";
     }
-    ;
-    return "redirect:/";
+
+    return redirectUrl !=null ? "redirect:"+redirectUrl : "redirect:/";
   }
+  
   //로그아웃
   @ResponseBody
   @PostMapping("/logout")

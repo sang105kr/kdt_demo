@@ -118,21 +118,46 @@ public class ApiProductController {
   }
   //목록
 //  @ResponseBody
+//  @GetMapping
+//  public ApiResponse<?> list(){
+//
+//    try {
+//      Thread.sleep(1000*3); // 1000이 1초
+//    }catch (InterruptedException e) {
+//      throw new RuntimeException(e);
+//    }
+//
+//    List<Product> list = productSVC.findAll();
+//
+//    ApiResponse<List<Product>> res = null;
+//    if(list.size() > 0) {
+//      res = ApiResponse.createApiResponse(ResCode.OK.getCode(), ResCode.OK.name(), list);
+//      res.setTotalCnt(productSVC.totalCnt());
+//    }else{
+//      res = ApiResponse.createApiResponseDetail(
+//              ResCode.OK.getCode(), ResCode.OK.name(), "등록된 상품이 1건도 없습니다.", list);
+//    }
+//    return res;
+//  }
   @GetMapping
-  public ApiResponse<?> list(){
+  public ApiResponse<?> list(
+          @RequestParam("reqPage") Long reqPage,
+          @RequestParam("reqCnt") Long reqCnt){
 
     try {
-      Thread.sleep(1000*3); // 1000이 1초
+      Thread.sleep(1000*1); // 1000이 1초
     }catch (InterruptedException e) {
       throw new RuntimeException(e);
     }
 
-    List<Product> list = productSVC.findAll();
+    List<Product> list = productSVC.findAll(reqPage,reqCnt);
 
     ApiResponse<List<Product>> res = null;
     if(list.size() > 0) {
       res = ApiResponse.createApiResponse(ResCode.OK.getCode(), ResCode.OK.name(), list);
       res.setTotalCnt(productSVC.totalCnt());
+      res.setReqPage(reqPage.intValue());
+      res.setRecCnt(reqCnt.intValue());
     }else{
       res = ApiResponse.createApiResponseDetail(
               ResCode.OK.getCode(), ResCode.OK.name(), "등록된 상품이 1건도 없습니다.", list);

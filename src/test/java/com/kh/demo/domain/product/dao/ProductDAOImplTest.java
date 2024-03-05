@@ -73,6 +73,16 @@ class ProductDAOImplTest {
   }
 
   @Test
+  @DisplayName("상품목록(페이징)")
+  void findAllByPaging(){
+    List<Product> list = productDAO.findAll(2L,10L);
+    for (Product product : list) {
+      log.info("product={}",product);
+    }
+    log.info("size={}",list.size());
+  }
+
+  @Test
   @DisplayName("상품수정")
   void updateById() {
     Long productId = 1230L;

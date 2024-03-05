@@ -185,13 +185,26 @@ public class ProductControllerV2 {
     return "redirect:/products/{pid}/detail";
   }
   
-  //목록
-  @GetMapping   // GET http://localhost:9080/products
-  public String findAll(Model model){
+//  //목록
+//  @GetMapping   // GET http://localhost:9080/products
+//  public String findAll(Model model){
+//
+//    List<Product> list = productSVC.findAll();
+//    model.addAttribute("list", list);
+//
+//    return "productv2/all";
+//  }
+  //목록(페이징)
+  @GetMapping   // GET http://localhost:9080/products?reqPage=2&reqCnt=10
+  public String findAllByPaging(
+          Model model,
+          @RequestParam("reqPage") Long reqPge, // 요청 페이지
+          @RequestParam("reqCnt") Long reqCnt   // 레코드 수
+  ){
 
-    List<Product> list = productSVC.findAll();
+    List<Product> list = productSVC.findAll(reqPge,reqCnt);
     model.addAttribute("list", list);
 
-    return "productv2/all";
+    return "productv2/allByPaging";
   }
 }

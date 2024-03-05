@@ -3,6 +3,8 @@ package com.kh.demo.web;
 import com.kh.demo.domain.entity.Member;
 import com.kh.demo.domain.member.svc.MemberSVC;
 import com.kh.demo.web.form.member.LoginForm;
+import com.kh.demo.web.form.member.LoginMember;
+import com.kh.demo.web.form.member.SessionConst;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
@@ -44,7 +46,11 @@ public class LoginController {
         //세션 생성  : 세션정보가 있으면 있는 세션정보를 없으면 새로이 생성 getSession(true)
         HttpSession session = request.getSession(true);
         //회원 정보를 세션에 저장
-        session.setAttribute("loginOK", optionalMember.get());
+        Member member = optionalMember.get();
+        LoginMember loginMember = new LoginMember(
+                member.getMemberId(), member.getEmail(),
+                member.getNickname(),member.getGubun());
+        session.setAttribute(SessionConst.LOGIN_MEMBER, loginMember);
       } else {
         //회원정보가 없는경우
         return "login";

@@ -15,17 +15,21 @@ public class LoginCheckInterCeptor implements HandlerInterceptor {
   public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
     //리다이렉트 URL만들기
     String redirectUrl = null;
-    //요청 파리미터 정보가 있는 경우 http://localhost:9080/products/news
-    String requestURI = request.getRequestURI(); // /products/news
-    log.info("요청url={}",requestURI);
 
+    String requestURI = request.getRequestURI();
+    log.info("요청uri={}",requestURI);              // /products/news
+    log.info("요청url={}",request.getRequestURL()); // http://localhost:9080/products/news
+
+    //요청 파리미터 정보가 있는 경우 http://localhost:9080/products/news?a=1&b=1
     if(request.getQueryString() != null){
+      log.info("요청url getQueryString={}",request.getQueryString());
       //요청파리미터 인코딩
       String queryString = URLEncoder.encode(request.getQueryString(),"UTF-8");   //aaa=xxx&bbb=yyy
       StringBuffer str = new StringBuffer();
-      redirectUrl = str.append(requestURI).append("&").append(queryString).toString(); //products?aaa=xxx&bbb=yyy
+      redirectUrl = str.append(requestURI).append("?").append(queryString).toString(); //products?aaa=xxx&bbb=yyy
+      log.info("redirectUrl={}",redirectUrl);
     }else{
-    //요청파리미터가 없는경우
+    //요청 파리미터 정보가 없는 경우 http://localhost:9080/products/news
       redirectUrl = requestURI;    // /products/news
     }
 

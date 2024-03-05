@@ -63,7 +63,7 @@ public class LoginController {
 
     return redirectUrl !=null ? "redirect:"+redirectUrl : "redirect:/";
   }
-  
+
   //로그아웃
   @ResponseBody
   @PostMapping("/logout")

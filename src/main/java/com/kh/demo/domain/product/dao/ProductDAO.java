@@ -12,8 +12,11 @@ public interface ProductDAO {
   //Optional 객체를 최대 1개를 저장할수 있는 컬렉션
   Optional<Product> findById(Long productId);
 
-  //목록
+  //목록(전체)
   List<Product> findAll();
+  //목록(페이징)
+  List<Product> findAll(Long reqPage, Long recordCnt);
+
 
   //단건삭제
   int deleteById(Long productId);

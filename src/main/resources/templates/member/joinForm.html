@@ -33,6 +33,11 @@
 
     dupchkBtn.addEventListener('click',evt=>{
       console.log('중복체크');
+      if(email.value.trim().length == 0){
+        errmsg_email.textContent = '이메일 입력바랍니다.'
+        email.focus();
+        return;
+      }
       dupchk();
     });
 

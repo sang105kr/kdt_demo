@@ -27,8 +27,10 @@ class Pagination {
       i < this.currentPageGroupStart + this.pagesPerPage && i <= totalPages;
       i++
     ) {
+      //현재 페이지인경우
       if (i === this.currentPage) {
         pageNavigation += `<button class="active" id="page${i}">${i}</button> `;
+      //현재 페이지아닌경우
       } else {
         pageNavigation += `<button id="page${i}">${i}</button> `;
       }
@@ -47,6 +49,10 @@ class Pagination {
 
   setCurrentPage(pageNumber) {
     this.currentPage = pageNumber;
+  }
+
+  setCurrentPageGroupStart(cpgs) {
+    this.currentPageGroupStart = cpgs;
   }
 
   setNextPageGroup() {

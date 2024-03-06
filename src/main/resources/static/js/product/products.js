@@ -85,8 +85,8 @@ async function list() {
 
       $productList.innerHTML = str;
 
-      //총건수는 초기 1회만
-      if(!pagination.getTotalRecords()) pagination.setTotalRecords(result.totalCnt);
+      //총 레코드 건수
+      pagination.setTotalRecords(result.totalCnt);
       pagination.displayPagination(list);
 
     }else{

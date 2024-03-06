@@ -1,5 +1,4 @@
   import {Pagination} from '/js/common.js'
-//    console.log(3);
     //페이징 객체 생성
     const pagination = new Pagination(10, 10); // 한페이지에 보여줄 레코드건수,한페이지에 보여줄 페이지수
     //총 레코드 건수

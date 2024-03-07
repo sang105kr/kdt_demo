@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko"
       xmlns:th="http://www.thymeleaf.org"
-      th:with="g_memberId=${session.loginMember.memberId}"
+      th:with="g_loginId=${session.loginMember.memberId}"
 >
 <head>
   <meta charset="UTF-8">
@@ -42,17 +42,17 @@
 
   <script th:inline="javascript">
 
-     //const memberId =  [[${g_memberId}]];
-     ///const memberEmail = [[${session.loginMember.email}]];
-     //const memberNickname = [[${session.loginMember.nickname}]];
-     ///const memberRole = [[${session.loginMember.gubun}]];
+     //const loginId =  [[${g_loginId}]];
+     ///const loginEmail = [[${session.loginMember.email}]];
+     //const loginNickname = [[${session.loginMember.nickname}]];
+     ///const loginRole = [[${session.loginMember.gubun}]];
 
-     const memberId =  1;
-     const memberEmail = 'user1@kh.com';
-     const memberNickname = '사용자1';
-     const memberRole = 'M0101';
+     const loginId =  1;
+     const loginEmail = 'user1@kh.com';
+     const loginNickname = '사용자1';
+     const loginRole = 'M0101';
 
-     console.log(memberId,memberEmail,memberNickname,memberRole);
+     console.log(loginId,loginEmail,loginNickname,loginRole);
 
      displayList();
 

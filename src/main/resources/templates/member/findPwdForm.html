@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{fragment/layout::main(
+      ~{::title},       <!--/* title */-->
+      <!--/*--------------------------*/-->
+      <!--/* external */-->
+      ~{},              <!--/* styles */-->
+      ~{},              <!--/* scripts */-->
+      <!--/* internal */-->
+      ~{::style},              <!--/* style */-->
+      ~{::script},              <!--/* script */-->
+      <!--/*--------------------------*/-->
+      ~{::.topmenu},    <!--/* upm */-->
+      ~{},              <!--/* header */-->
+      ~{::.gnb},         <!--/* gnb */-->
+      ~{::main},        <!--/* main */-->
+      ~{::.foot},       <!--/* footer default*/-->
+      )}">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>비밀번호 분실</title>
+  <style>
+    form input,
+    form button {
+      border: 1px solid black;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded',init);
+    function init(){
+      chkBtn.addEventListener('click',evt=> chkValid(evt) )
+    }
+
+    function chkValid(evt){
+      console.log(evt);
+      if(email.value.trim().length == 0) {
+        email.focus();
+        return;
+      }
+      if(nickname.value.trim().length == 0) {
+        nickname.focus();
+        return;
+      }
+      msg.textContent = '전송중...';
+      postData();
+    }
+
+    async function postData() {
+      const payload = {
+        'email':email.value,
+        'nickname':nickname.value
+      }
+
+      const url = '/api/members/findPwd';
+      const options = {
+        method: 'POST',
+        headers: {
+          'Content-Type':'application/json'  // JSON 형태로 데이터 전송
+        },
+        body: JSON.stringify(payload)           // js객체 => 요청메시지 바디 JSON포맷 문자열롤 변환
+      }
+
+      const res = await fetch(url, options);
+      const result = await res.json();           // 응답메시지 바디 JSON포맷 문자열 => js객체 변환
+      if(result.header.rtcd === '21'){
+        console.log('임시비밀번호 메일전송');
+        msg.textContent = '임시비밀번호 메일전송';
+        chkBtn.disabled = true; // 버튼 비활성화
+        chkBtn.innerText = '메일전송됨';
+      }else if(result.header.rtcd === '22'){
+        console.log('회원정보없음');
+        msg.textContent = '회원정보없음';
+      }else {
+        console.log('기타오류');
+      }
+    }
+  </script>
+</head>
+<body>
+<div class="wrap">
+  <div id="tl"></div>
+  <div id="tc">
+    <div class="topmenu" th:insert="~{fragment/top::beforeLoginTop}"/>
+  </div>
+  <div id="tr"></div>
+  <div id="banner">
+    <header class="head" th:insert="~{fragment/banner::global}"/>
+  </div>
+  <div id="gnb">
+    <nav class="gnb" th:insert="~{fragment/menu::global}"/>
+  </div>
+  <div id="content">
+    <main class="main">
+      <form action="">
+        <div><input type="email" name="email" id="email"></div>
+        <div><input type="text" name="nickname" id="nickname"></div>
+        <div><button id="chkBtn" type="button">확인</button></div>
+      </form>
+      <div id="msg"></div>
+    </main>
+  </div>
+  <div id="foot">
+    <footer class="foot" th:insert="~{fragment/footer::global}"/>
+  </div>
+</div>
+</body>
+</html>

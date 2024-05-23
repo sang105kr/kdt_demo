@@ -16,20 +16,24 @@ import java.io.InputStreamReader;
 @RequestMapping("/admin")
 public class AdminController {
 
+  final String INTERPRETER_PATH = "d:/kdt/anaconda3/python.exe";
+  final String PYTHON_SOURCE_PATH = "d:/kdt/projects/pythonDemo2/visualization";
+
+  // 물리적인 이미지 파일이 없이 메모리 입출력
   @GetMapping("/plot")
   public String showPlot(Model model) {
 
-    String INTERPRETER_PATH = "d:/kdt/anaconda3/python.exe";
-    final String SOURCE_PATH = "d:/kdt/projects/pythonDemo/visualization";
-
     // 파이썬 스크립트 실행
-//    ProcessBuilder processBuilder = new ProcessBuilder("python", "test.py");
+    // ProcessBuilder : 외부 스크립트파일 실행
     ProcessBuilder processBuilder = new ProcessBuilder( INTERPRETER_PATH, "test.py");
-    processBuilder.directory(new File(SOURCE_PATH));
+    processBuilder.directory(new File(PYTHON_SOURCE_PATH));
+    
+    // 외부 스크립트파일 실행 결과를 저장하기위한 문자열 객체
     StringBuilder result = new StringBuilder();
 
     try {
-      Process process = processBuilder.start();
+      Process process = processBuilder.start(); // 외부 스크립트 실행
+      // 외부 스크립트 실행 결과를 읽어들여 메모리에 저장
       BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
       String line;
       while ((line = reader.readLine()) != null) {
@@ -45,14 +49,13 @@ public class AdminController {
     return "admin/plot";
   }
 
+  // 물리적인 이미지 파일이 있는 경우
   @GetMapping("/plot2")
   public String showPlot2(Model model) {
 
-    String INTERPRETER_PATH = "d:/kdt/anaconda3/python.exe";
-    final String SOURCE_PATH = "d:/kdt/projects/pythonDemo/visualization";
     // 파이썬 스크립트 실행
     ProcessBuilder processBuilder = new ProcessBuilder( INTERPRETER_PATH, "test.py");
-    processBuilder.directory(new File(SOURCE_PATH));
+    processBuilder.directory(new File(PYTHON_SOURCE_PATH));
     try {
       processBuilder.start().waitFor();
     } catch (IOException | InterruptedException e) {

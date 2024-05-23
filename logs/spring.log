@@ -765,3 +765,727 @@ SELECT COUNT(product_id) FROM product ;
 2024-05-23T10:26:58.482+09:00  INFO 740 --- [Thread-59] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-05-23T10:26:58.483+09:00  INFO 740 --- [Thread-59] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
 2024-05-23T10:26:58.498+09:00  INFO 740 --- [Thread-59] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2024-05-23T10:26:58.616+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Starting DemoApplication using Java 17.0.9 with PID 740 (D:\kdt\projects\demo\out\production\classes started by kh502 in D:\kdt\projects\demo)
+2024-05-23T10:26:58.617+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-05-23T10:26:59.007+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23T10:26:59.014+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2024-05-23T10:26:59.171+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2024-05-23T10:26:59.173+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-23T10:26:59.173+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-05-23T10:26:59.230+09:00  INFO 740 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-23T10:26:59.230+09:00  INFO 740 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 611 ms
+2024-05-23T10:26:59.308+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2024-05-23T10:26:59.308+09:00  WARN 740 --- [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-05-23T10:26:59.366+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection oracle.jdbc.driver.T4CConnection@32482f1e
+2024-05-23T10:26:59.366+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2024-05-23T10:26:59.368+09:00  INFO 740 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23T10:26:59.373+09:00  INFO 740 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-23T10:26:59.380+09:00  INFO 740 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23T10:26:59.384+09:00  WARN 740 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 18.0.0 version for [org.hibernate.dialect.OracleDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 19.0.0. Check the community dialects project for available legacy versions.
+2024-05-23T10:26:59.450+09:00  INFO 740 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23T10:26:59.451+09:00  INFO 740 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:26:59.639+09:00  WARN 740 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-23T10:26:59.671+09:00  INFO 740 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-05-23T10:26:59.908+09:00  INFO 740 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-23T10:26:59.929+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path ''
+2024-05-23T10:26:59.934+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Started DemoApplication in 1.357 seconds (process running for 4428.647)
+2024-05-23T10:26:59.936+09:00  INFO 740 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-05-23T10:31:41.951+09:00  INFO 740 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-05-23T10:31:41.976+09:00  INFO 740 --- [Thread-68] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:31:41.977+09:00  INFO 740 --- [Thread-68] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2024-05-23T10:31:41.997+09:00  INFO 740 --- [Thread-68] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2024-05-23T10:31:42.106+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Starting DemoApplication using Java 17.0.9 with PID 740 (D:\kdt\projects\demo\out\production\classes started by kh502 in D:\kdt\projects\demo)
+2024-05-23T10:31:42.106+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-05-23T10:31:42.493+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23T10:31:42.506+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2024-05-23T10:31:42.703+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2024-05-23T10:31:42.704+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-23T10:31:42.704+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-05-23T10:31:42.744+09:00  INFO 740 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-23T10:31:42.744+09:00  INFO 740 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 635 ms
+2024-05-23T10:31:42.796+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2024-05-23T10:31:42.796+09:00  WARN 740 --- [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-05-23T10:31:42.871+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection oracle.jdbc.driver.T4CConnection@307fb94d
+2024-05-23T10:31:42.872+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2024-05-23T10:31:42.873+09:00  INFO 740 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23T10:31:42.881+09:00  INFO 740 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-23T10:31:42.887+09:00  INFO 740 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23T10:31:42.891+09:00  WARN 740 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 18.0.0 version for [org.hibernate.dialect.OracleDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 19.0.0. Check the community dialects project for available legacy versions.
+2024-05-23T10:31:42.968+09:00  INFO 740 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23T10:31:42.968+09:00  INFO 740 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:31:43.158+09:00  WARN 740 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-23T10:31:43.167+09:00  INFO 740 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-05-23T10:31:43.313+09:00  INFO 740 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-23T10:31:43.338+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path ''
+2024-05-23T10:31:43.342+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Started DemoApplication in 1.267 seconds (process running for 4712.056)
+2024-05-23T10:31:43.344+09:00  INFO 740 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-05-23T10:31:45.832+09:00  INFO 740 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-05-23T10:31:45.848+09:00  INFO 740 --- [Thread-77] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:31:45.849+09:00  INFO 740 --- [Thread-77] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2024-05-23T10:31:45.864+09:00  INFO 740 --- [Thread-77] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2024-05-23T10:31:45.954+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Starting DemoApplication using Java 17.0.9 with PID 740 (D:\kdt\projects\demo\out\production\classes started by kh502 in D:\kdt\projects\demo)
+2024-05-23T10:31:45.955+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-05-23T10:31:46.314+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23T10:31:46.322+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2024-05-23T10:31:46.475+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2024-05-23T10:31:46.475+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-23T10:31:46.475+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-05-23T10:31:46.538+09:00  INFO 740 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-23T10:31:46.538+09:00  INFO 740 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 580 ms
+2024-05-23T10:31:46.585+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2024-05-23T10:31:46.586+09:00  WARN 740 --- [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-05-23T10:31:46.640+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection oracle.jdbc.driver.T4CConnection@a858505
+2024-05-23T10:31:46.640+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2024-05-23T10:31:46.642+09:00  INFO 740 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23T10:31:46.646+09:00  INFO 740 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-23T10:31:46.652+09:00  INFO 740 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23T10:31:46.655+09:00  WARN 740 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 18.0.0 version for [org.hibernate.dialect.OracleDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 19.0.0. Check the community dialects project for available legacy versions.
+2024-05-23T10:31:46.714+09:00  INFO 740 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23T10:31:46.714+09:00  INFO 740 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:31:46.865+09:00  WARN 740 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-23T10:31:46.897+09:00  INFO 740 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-05-23T10:31:46.988+09:00  INFO 740 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-23T10:31:46.999+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path ''
+2024-05-23T10:31:47.002+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Started DemoApplication in 1.079 seconds (process running for 4715.716)
+2024-05-23T10:31:47.004+09:00  INFO 740 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-05-23T10:32:26.468+09:00  INFO 740 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-05-23T10:32:26.499+09:00  INFO 740 --- [Thread-86] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:32:26.500+09:00  INFO 740 --- [Thread-86] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2024-05-23T10:32:26.535+09:00  INFO 740 --- [Thread-86] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2024-05-23T10:32:26.761+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Starting DemoApplication using Java 17.0.9 with PID 740 (D:\kdt\projects\demo\out\production\classes started by kh502 in D:\kdt\projects\demo)
+2024-05-23T10:32:26.761+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-05-23T10:32:27.298+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23T10:32:27.310+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 JPA repository interfaces.
+2024-05-23T10:32:27.688+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2024-05-23T10:32:27.689+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-23T10:32:27.689+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-05-23T10:32:27.751+09:00  INFO 740 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-23T10:32:27.751+09:00  INFO 740 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 987 ms
+2024-05-23T10:32:27.803+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2024-05-23T10:32:27.803+09:00  WARN 740 --- [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-05-23T10:32:27.858+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-10 - Added connection oracle.jdbc.driver.T4CConnection@18955a4b
+2024-05-23T10:32:27.858+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2024-05-23T10:32:27.860+09:00  INFO 740 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23T10:32:27.864+09:00  INFO 740 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-23T10:32:27.870+09:00  INFO 740 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23T10:32:27.874+09:00  WARN 740 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 18.0.0 version for [org.hibernate.dialect.OracleDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 19.0.0. Check the community dialects project for available legacy versions.
+2024-05-23T10:32:27.955+09:00  INFO 740 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23T10:32:27.955+09:00  INFO 740 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:32:28.185+09:00  WARN 740 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-23T10:32:28.221+09:00  INFO 740 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-05-23T10:32:28.324+09:00  INFO 740 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-23T10:32:28.344+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path ''
+2024-05-23T10:32:28.349+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Started DemoApplication in 1.693 seconds (process running for 4757.063)
+2024-05-23T10:32:28.351+09:00  INFO 740 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-05-23T10:32:31.817+09:00  INFO 740 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-05-23T10:32:31.832+09:00  INFO 740 --- [Thread-95] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:32:31.832+09:00  INFO 740 --- [Thread-95] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2024-05-23T10:32:31.844+09:00  INFO 740 --- [Thread-95] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2024-05-23T10:32:31.936+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Starting DemoApplication using Java 17.0.9 with PID 740 (D:\kdt\projects\demo\out\production\classes started by kh502 in D:\kdt\projects\demo)
+2024-05-23T10:32:31.936+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-05-23T10:32:32.253+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23T10:32:32.261+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2024-05-23T10:32:32.406+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2024-05-23T10:32:32.407+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-23T10:32:32.407+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-05-23T10:32:32.462+09:00  INFO 740 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-23T10:32:32.462+09:00  INFO 740 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 524 ms
+2024-05-23T10:32:32.513+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2024-05-23T10:32:32.513+09:00  WARN 740 --- [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-05-23T10:32:32.574+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-11 - Added connection oracle.jdbc.driver.T4CConnection@6d1076ab
+2024-05-23T10:32:32.574+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2024-05-23T10:32:32.575+09:00  INFO 740 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23T10:32:32.580+09:00  INFO 740 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-23T10:32:32.586+09:00  INFO 740 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23T10:32:32.589+09:00  WARN 740 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 18.0.0 version for [org.hibernate.dialect.OracleDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 19.0.0. Check the community dialects project for available legacy versions.
+2024-05-23T10:32:32.645+09:00  INFO 740 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23T10:32:32.646+09:00  INFO 740 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:32:32.770+09:00  WARN 740 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-23T10:32:32.785+09:00  INFO 740 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-05-23T10:32:32.904+09:00  INFO 740 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-23T10:32:32.925+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path ''
+2024-05-23T10:32:32.933+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Started DemoApplication in 1.024 seconds (process running for 4761.647)
+2024-05-23T10:32:32.940+09:00  INFO 740 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-05-23T10:33:54.509+09:00  INFO 740 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-05-23T10:33:54.526+09:00  INFO 740 --- [Thread-104] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:33:54.527+09:00  INFO 740 --- [Thread-104] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
+2024-05-23T10:33:54.536+09:00  INFO 740 --- [Thread-104] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
+2024-05-23T10:33:54.637+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Starting DemoApplication using Java 17.0.9 with PID 740 (D:\kdt\projects\demo\out\production\classes started by kh502 in D:\kdt\projects\demo)
+2024-05-23T10:33:54.638+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-05-23T10:33:54.918+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23T10:33:54.923+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2024-05-23T10:33:55.035+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2024-05-23T10:33:55.036+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-23T10:33:55.036+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-05-23T10:33:55.072+09:00  INFO 740 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-23T10:33:55.072+09:00  INFO 740 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 432 ms
+2024-05-23T10:33:55.118+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Starting...
+2024-05-23T10:33:55.118+09:00  WARN 740 --- [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-05-23T10:33:55.163+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-12 - Added connection oracle.jdbc.driver.T4CConnection@3c624b6d
+2024-05-23T10:33:55.164+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Start completed.
+2024-05-23T10:33:55.165+09:00  INFO 740 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23T10:33:55.169+09:00  INFO 740 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-23T10:33:55.175+09:00  INFO 740 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23T10:33:55.178+09:00  WARN 740 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 18.0.0 version for [org.hibernate.dialect.OracleDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 19.0.0. Check the community dialects project for available legacy versions.
+2024-05-23T10:33:55.233+09:00  INFO 740 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23T10:33:55.233+09:00  INFO 740 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:33:55.348+09:00  WARN 740 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-23T10:33:55.358+09:00  INFO 740 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-05-23T10:33:55.554+09:00  INFO 740 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-23T10:33:55.573+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path ''
+2024-05-23T10:33:55.576+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Started DemoApplication in 0.972 seconds (process running for 4844.29)
+2024-05-23T10:33:55.578+09:00  INFO 740 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-05-23T10:33:58.052+09:00  INFO 740 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-05-23T10:33:58.069+09:00  INFO 740 --- [Thread-113] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:33:58.069+09:00  INFO 740 --- [Thread-113] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown initiated...
+2024-05-23T10:33:58.083+09:00  INFO 740 --- [Thread-113] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown completed.
+2024-05-23T10:33:58.193+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Starting DemoApplication using Java 17.0.9 with PID 740 (D:\kdt\projects\demo\out\production\classes started by kh502 in D:\kdt\projects\demo)
+2024-05-23T10:33:58.193+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-05-23T10:33:58.488+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23T10:33:58.494+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2024-05-23T10:33:58.659+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2024-05-23T10:33:58.660+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-23T10:33:58.660+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-05-23T10:33:58.704+09:00  INFO 740 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-23T10:33:58.704+09:00  INFO 740 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 508 ms
+2024-05-23T10:33:58.748+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Starting...
+2024-05-23T10:33:58.748+09:00  WARN 740 --- [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-05-23T10:33:58.794+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-13 - Added connection oracle.jdbc.driver.T4CConnection@73702c6c
+2024-05-23T10:33:58.794+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Start completed.
+2024-05-23T10:33:58.796+09:00  INFO 740 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23T10:33:58.800+09:00  INFO 740 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-23T10:33:58.806+09:00  INFO 740 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23T10:33:58.809+09:00  WARN 740 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 18.0.0 version for [org.hibernate.dialect.OracleDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 19.0.0. Check the community dialects project for available legacy versions.
+2024-05-23T10:33:58.872+09:00  INFO 740 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23T10:33:58.872+09:00  INFO 740 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:33:58.988+09:00  WARN 740 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-23T10:33:58.998+09:00  INFO 740 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-05-23T10:33:59.103+09:00  INFO 740 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-23T10:33:59.139+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path ''
+2024-05-23T10:33:59.144+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Started DemoApplication in 0.988 seconds (process running for 4847.857)
+2024-05-23T10:33:59.145+09:00  INFO 740 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-05-23T10:34:06.723+09:00  INFO 740 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-05-23T10:34:06.744+09:00  INFO 740 --- [Thread-122] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:34:06.744+09:00  INFO 740 --- [Thread-122] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown initiated...
+2024-05-23T10:34:06.760+09:00  INFO 740 --- [Thread-122] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown completed.
+2024-05-23T10:34:06.856+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Starting DemoApplication using Java 17.0.9 with PID 740 (D:\kdt\projects\demo\out\production\classes started by kh502 in D:\kdt\projects\demo)
+2024-05-23T10:34:06.856+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-05-23T10:34:07.292+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23T10:34:07.299+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2024-05-23T10:34:07.800+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2024-05-23T10:34:07.800+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-23T10:34:07.801+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-05-23T10:34:07.890+09:00  INFO 740 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-23T10:34:07.890+09:00  INFO 740 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1031 ms
+2024-05-23T10:34:07.982+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Starting...
+2024-05-23T10:34:07.983+09:00  WARN 740 --- [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-05-23T10:34:08.052+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-14 - Added connection oracle.jdbc.driver.T4CConnection@7e14cfba
+2024-05-23T10:34:08.053+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Start completed.
+2024-05-23T10:34:08.054+09:00  INFO 740 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23T10:34:08.059+09:00  INFO 740 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-23T10:34:08.065+09:00  INFO 740 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23T10:34:08.069+09:00  WARN 740 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 18.0.0 version for [org.hibernate.dialect.OracleDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 19.0.0. Check the community dialects project for available legacy versions.
+2024-05-23T10:34:08.178+09:00  INFO 740 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23T10:34:08.178+09:00  INFO 740 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:34:08.394+09:00  WARN 740 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-23T10:34:08.406+09:00  INFO 740 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-05-23T10:34:08.531+09:00  INFO 740 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-23T10:34:08.543+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path ''
+2024-05-23T10:34:08.546+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Started DemoApplication in 1.721 seconds (process running for 4857.259)
+2024-05-23T10:34:08.547+09:00  INFO 740 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-05-23T10:34:11.001+09:00  INFO 740 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-05-23T10:34:11.020+09:00  INFO 740 --- [Thread-131] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:34:11.020+09:00  INFO 740 --- [Thread-131] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown initiated...
+2024-05-23T10:34:11.034+09:00  INFO 740 --- [Thread-131] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown completed.
+2024-05-23T10:34:11.151+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Starting DemoApplication using Java 17.0.9 with PID 740 (D:\kdt\projects\demo\out\production\classes started by kh502 in D:\kdt\projects\demo)
+2024-05-23T10:34:11.151+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-05-23T10:34:11.500+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23T10:34:11.508+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2024-05-23T10:34:11.665+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2024-05-23T10:34:11.665+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-23T10:34:11.665+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-05-23T10:34:11.705+09:00  INFO 740 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-23T10:34:11.705+09:00  INFO 740 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 552 ms
+2024-05-23T10:34:11.756+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Starting...
+2024-05-23T10:34:11.756+09:00  WARN 740 --- [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-05-23T10:34:11.813+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-15 - Added connection oracle.jdbc.driver.T4CConnection@30015785
+2024-05-23T10:34:11.813+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Start completed.
+2024-05-23T10:34:11.815+09:00  INFO 740 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23T10:34:11.819+09:00  INFO 740 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-23T10:34:11.826+09:00  INFO 740 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23T10:34:11.830+09:00  WARN 740 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 18.0.0 version for [org.hibernate.dialect.OracleDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 19.0.0. Check the community dialects project for available legacy versions.
+2024-05-23T10:34:11.895+09:00  INFO 740 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23T10:34:11.896+09:00  INFO 740 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:34:12.036+09:00  WARN 740 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-23T10:34:12.053+09:00  INFO 740 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-05-23T10:34:12.198+09:00  INFO 740 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-23T10:34:12.206+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path ''
+2024-05-23T10:34:12.210+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Started DemoApplication in 1.095 seconds (process running for 4860.924)
+2024-05-23T10:34:12.211+09:00  INFO 740 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-05-23T10:34:49.969+09:00  INFO 740 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-05-23T10:34:49.984+09:00  INFO 740 --- [Thread-140] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:34:49.985+09:00  INFO 740 --- [Thread-140] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown initiated...
+2024-05-23T10:34:49.995+09:00  INFO 740 --- [Thread-140] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown completed.
+2024-05-23T10:34:50.092+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Starting DemoApplication using Java 17.0.9 with PID 740 (D:\kdt\projects\demo\out\production\classes started by kh502 in D:\kdt\projects\demo)
+2024-05-23T10:34:50.093+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-05-23T10:34:50.340+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23T10:34:50.346+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2024-05-23T10:34:50.501+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2024-05-23T10:34:50.503+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-23T10:34:50.503+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-05-23T10:34:50.547+09:00  INFO 740 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-23T10:34:50.548+09:00  INFO 740 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 453 ms
+2024-05-23T10:34:50.604+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Starting...
+2024-05-23T10:34:50.604+09:00  WARN 740 --- [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-05-23T10:34:50.655+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-16 - Added connection oracle.jdbc.driver.T4CConnection@54151a41
+2024-05-23T10:34:50.655+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Start completed.
+2024-05-23T10:34:50.657+09:00  INFO 740 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23T10:34:50.662+09:00  INFO 740 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-23T10:34:50.668+09:00  INFO 740 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23T10:34:50.672+09:00  WARN 740 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 18.0.0 version for [org.hibernate.dialect.OracleDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 19.0.0. Check the community dialects project for available legacy versions.
+2024-05-23T10:34:50.738+09:00  INFO 740 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23T10:34:50.739+09:00  INFO 740 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:34:50.921+09:00  WARN 740 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-23T10:34:50.932+09:00  INFO 740 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-05-23T10:34:51.053+09:00  INFO 740 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-23T10:34:51.065+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path ''
+2024-05-23T10:34:51.068+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Started DemoApplication in 1.007 seconds (process running for 4899.782)
+2024-05-23T10:34:51.069+09:00  INFO 740 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-05-23T10:34:52.494+09:00  INFO 740 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-05-23T10:34:52.513+09:00  INFO 740 --- [Thread-149] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:34:52.514+09:00  INFO 740 --- [Thread-149] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Shutdown initiated...
+2024-05-23T10:34:52.526+09:00  INFO 740 --- [Thread-149] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Shutdown completed.
+2024-05-23T10:34:52.621+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Starting DemoApplication using Java 17.0.9 with PID 740 (D:\kdt\projects\demo\out\production\classes started by kh502 in D:\kdt\projects\demo)
+2024-05-23T10:34:52.621+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-05-23T10:34:52.904+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23T10:34:52.910+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2024-05-23T10:34:53.030+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2024-05-23T10:34:53.031+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-23T10:34:53.031+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-05-23T10:34:53.072+09:00  INFO 740 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-23T10:34:53.072+09:00  INFO 740 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 449 ms
+2024-05-23T10:34:53.114+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Starting...
+2024-05-23T10:34:53.114+09:00  WARN 740 --- [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-05-23T10:34:53.168+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-17 - Added connection oracle.jdbc.driver.T4CConnection@5d8d71db
+2024-05-23T10:34:53.168+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Start completed.
+2024-05-23T10:34:53.169+09:00  INFO 740 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23T10:34:53.174+09:00  INFO 740 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-23T10:34:53.180+09:00  INFO 740 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23T10:34:53.183+09:00  WARN 740 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 18.0.0 version for [org.hibernate.dialect.OracleDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 19.0.0. Check the community dialects project for available legacy versions.
+2024-05-23T10:34:53.247+09:00  INFO 740 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23T10:34:53.247+09:00  INFO 740 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:34:53.356+09:00  WARN 740 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-23T10:34:53.372+09:00  INFO 740 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-05-23T10:34:53.470+09:00  INFO 740 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-23T10:34:53.482+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path ''
+2024-05-23T10:34:53.485+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Started DemoApplication in 0.891 seconds (process running for 4902.198)
+2024-05-23T10:34:53.486+09:00  INFO 740 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-05-23T10:35:26.302+09:00  INFO 740 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-05-23T10:35:26.318+09:00  INFO 740 --- [Thread-158] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:35:26.318+09:00  INFO 740 --- [Thread-158] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Shutdown initiated...
+2024-05-23T10:35:26.337+09:00  INFO 740 --- [Thread-158] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Shutdown completed.
+2024-05-23T10:35:26.435+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Starting DemoApplication using Java 17.0.9 with PID 740 (D:\kdt\projects\demo\out\production\classes started by kh502 in D:\kdt\projects\demo)
+2024-05-23T10:35:26.435+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-05-23T10:35:26.727+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23T10:35:26.732+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2024-05-23T10:35:26.850+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2024-05-23T10:35:26.851+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-23T10:35:26.852+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-05-23T10:35:26.889+09:00  INFO 740 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-23T10:35:26.889+09:00  INFO 740 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 452 ms
+2024-05-23T10:35:26.962+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Starting...
+2024-05-23T10:35:26.962+09:00  WARN 740 --- [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-05-23T10:35:27.020+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Added connection oracle.jdbc.driver.T4CConnection@9ad3f24
+2024-05-23T10:35:27.020+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Start completed.
+2024-05-23T10:35:27.021+09:00  INFO 740 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23T10:35:27.025+09:00  INFO 740 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-23T10:35:27.031+09:00  INFO 740 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23T10:35:27.034+09:00  WARN 740 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 18.0.0 version for [org.hibernate.dialect.OracleDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 19.0.0. Check the community dialects project for available legacy versions.
+2024-05-23T10:35:27.097+09:00  INFO 740 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23T10:35:27.098+09:00  INFO 740 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:35:27.391+09:00  WARN 740 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-23T10:35:27.412+09:00  INFO 740 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-05-23T10:35:27.553+09:00  INFO 740 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-23T10:35:27.567+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path ''
+2024-05-23T10:35:27.572+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Started DemoApplication in 1.163 seconds (process running for 4936.286)
+2024-05-23T10:35:27.574+09:00  INFO 740 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-05-23T10:35:29.085+09:00  INFO 740 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-05-23T10:35:29.106+09:00  INFO 740 --- [Thread-167] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:35:29.107+09:00  INFO 740 --- [Thread-167] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Shutdown initiated...
+2024-05-23T10:35:29.121+09:00  INFO 740 --- [Thread-167] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Shutdown completed.
+2024-05-23T10:35:29.224+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Starting DemoApplication using Java 17.0.9 with PID 740 (D:\kdt\projects\demo\out\production\classes started by kh502 in D:\kdt\projects\demo)
+2024-05-23T10:35:29.225+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-05-23T10:35:29.528+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23T10:35:29.534+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2024-05-23T10:35:29.656+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2024-05-23T10:35:29.656+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-23T10:35:29.657+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-05-23T10:35:29.703+09:00  INFO 740 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-23T10:35:29.703+09:00  INFO 740 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 476 ms
+2024-05-23T10:35:29.746+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Starting...
+2024-05-23T10:35:29.746+09:00  WARN 740 --- [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-05-23T10:35:29.794+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-19 - Added connection oracle.jdbc.driver.T4CConnection@59917c19
+2024-05-23T10:35:29.794+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Start completed.
+2024-05-23T10:35:29.796+09:00  INFO 740 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23T10:35:29.800+09:00  INFO 740 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-23T10:35:29.805+09:00  INFO 740 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23T10:35:29.809+09:00  WARN 740 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 18.0.0 version for [org.hibernate.dialect.OracleDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 19.0.0. Check the community dialects project for available legacy versions.
+2024-05-23T10:35:29.882+09:00  INFO 740 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23T10:35:29.882+09:00  INFO 740 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:35:30.005+09:00  WARN 740 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-23T10:35:30.024+09:00  INFO 740 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-05-23T10:35:30.153+09:00  INFO 740 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-23T10:35:30.171+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path ''
+2024-05-23T10:35:30.176+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Started DemoApplication in 0.984 seconds (process running for 4938.89)
+2024-05-23T10:35:30.183+09:00  INFO 740 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-05-23T10:37:07.318+09:00  INFO 740 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-05-23T10:37:07.368+09:00  INFO 740 --- [Thread-176] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:37:07.369+09:00  INFO 740 --- [Thread-176] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Shutdown initiated...
+2024-05-23T10:37:07.386+09:00  INFO 740 --- [Thread-176] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Shutdown completed.
+2024-05-23T10:37:07.503+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Starting DemoApplication using Java 17.0.9 with PID 740 (D:\kdt\projects\demo\out\production\classes started by kh502 in D:\kdt\projects\demo)
+2024-05-23T10:37:07.503+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-05-23T10:37:07.904+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23T10:37:07.911+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2024-05-23T10:37:08.098+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2024-05-23T10:37:08.099+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-23T10:37:08.099+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-05-23T10:37:08.143+09:00  INFO 740 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-23T10:37:08.143+09:00  INFO 740 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 638 ms
+2024-05-23T10:37:08.193+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Starting...
+2024-05-23T10:37:08.193+09:00  WARN 740 --- [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-05-23T10:37:08.245+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-20 - Added connection oracle.jdbc.driver.T4CConnection@42b15a5d
+2024-05-23T10:37:08.245+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Start completed.
+2024-05-23T10:37:08.247+09:00  INFO 740 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23T10:37:08.251+09:00  INFO 740 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-23T10:37:08.256+09:00  INFO 740 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23T10:37:08.260+09:00  WARN 740 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 18.0.0 version for [org.hibernate.dialect.OracleDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 19.0.0. Check the community dialects project for available legacy versions.
+2024-05-23T10:37:08.319+09:00  INFO 740 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23T10:37:08.319+09:00  INFO 740 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:37:08.434+09:00  WARN 740 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-23T10:37:08.444+09:00  INFO 740 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-05-23T10:37:08.552+09:00  INFO 740 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-23T10:37:08.567+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path ''
+2024-05-23T10:37:08.574+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Started DemoApplication in 1.101 seconds (process running for 5037.287)
+2024-05-23T10:37:08.575+09:00  INFO 740 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-05-23T10:37:12.140+09:00  INFO 740 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-05-23T10:37:12.155+09:00  INFO 740 --- [Thread-185] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:37:12.156+09:00  INFO 740 --- [Thread-185] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Shutdown initiated...
+2024-05-23T10:37:12.169+09:00  INFO 740 --- [Thread-185] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Shutdown completed.
+2024-05-23T10:37:12.270+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Starting DemoApplication using Java 17.0.9 with PID 740 (D:\kdt\projects\demo\out\production\classes started by kh502 in D:\kdt\projects\demo)
+2024-05-23T10:37:12.270+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-05-23T10:37:12.554+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23T10:37:12.560+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2024-05-23T10:37:12.676+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2024-05-23T10:37:12.676+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-23T10:37:12.676+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-05-23T10:37:12.724+09:00  INFO 740 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-23T10:37:12.724+09:00  INFO 740 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 452 ms
+2024-05-23T10:37:12.772+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Starting...
+2024-05-23T10:37:12.772+09:00  WARN 740 --- [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-05-23T10:37:12.820+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-21 - Added connection oracle.jdbc.driver.T4CConnection@589339da
+2024-05-23T10:37:12.820+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Start completed.
+2024-05-23T10:37:12.821+09:00  INFO 740 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23T10:37:12.825+09:00  INFO 740 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-23T10:37:12.830+09:00  INFO 740 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23T10:37:12.833+09:00  WARN 740 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 18.0.0 version for [org.hibernate.dialect.OracleDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 19.0.0. Check the community dialects project for available legacy versions.
+2024-05-23T10:37:12.881+09:00  INFO 740 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23T10:37:12.881+09:00  INFO 740 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:37:12.958+09:00  WARN 740 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-23T10:37:12.967+09:00  INFO 740 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-05-23T10:37:13.035+09:00  INFO 740 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-23T10:37:13.045+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path ''
+2024-05-23T10:37:13.047+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Started DemoApplication in 0.801 seconds (process running for 5041.76)
+2024-05-23T10:37:13.048+09:00  INFO 740 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-05-23T10:37:35.412+09:00  INFO 740 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-05-23T10:37:35.429+09:00  INFO 740 --- [Thread-194] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:37:35.429+09:00  INFO 740 --- [Thread-194] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Shutdown initiated...
+2024-05-23T10:37:35.439+09:00  INFO 740 --- [Thread-194] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Shutdown completed.
+2024-05-23T10:37:35.539+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Starting DemoApplication using Java 17.0.9 with PID 740 (D:\kdt\projects\demo\out\production\classes started by kh502 in D:\kdt\projects\demo)
+2024-05-23T10:37:35.539+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-05-23T10:37:35.833+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23T10:37:35.841+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2024-05-23T10:37:35.956+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2024-05-23T10:37:35.957+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-23T10:37:35.957+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-05-23T10:37:36.000+09:00  INFO 740 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-23T10:37:36.000+09:00  INFO 740 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 459 ms
+2024-05-23T10:37:36.113+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Starting...
+2024-05-23T10:37:36.114+09:00  WARN 740 --- [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-05-23T10:37:36.171+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-22 - Added connection oracle.jdbc.driver.T4CConnection@349ee848
+2024-05-23T10:37:36.175+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Start completed.
+2024-05-23T10:37:36.177+09:00  INFO 740 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23T10:37:36.181+09:00  INFO 740 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-23T10:37:36.186+09:00  INFO 740 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23T10:37:36.190+09:00  WARN 740 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 18.0.0 version for [org.hibernate.dialect.OracleDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 19.0.0. Check the community dialects project for available legacy versions.
+2024-05-23T10:37:36.254+09:00  INFO 740 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23T10:37:36.255+09:00  INFO 740 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:37:36.362+09:00  WARN 740 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-23T10:37:36.371+09:00  INFO 740 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-05-23T10:37:36.464+09:00  INFO 740 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-23T10:37:36.477+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path ''
+2024-05-23T10:37:36.484+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Started DemoApplication in 0.974 seconds (process running for 5065.197)
+2024-05-23T10:37:36.485+09:00  INFO 740 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-05-23T10:37:38.941+09:00  INFO 740 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-05-23T10:37:38.957+09:00  INFO 740 --- [Thread-203] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:37:38.958+09:00  INFO 740 --- [Thread-203] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Shutdown initiated...
+2024-05-23T10:37:38.972+09:00  INFO 740 --- [Thread-203] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Shutdown completed.
+2024-05-23T10:37:39.067+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Starting DemoApplication using Java 17.0.9 with PID 740 (D:\kdt\projects\demo\out\production\classes started by kh502 in D:\kdt\projects\demo)
+2024-05-23T10:37:39.068+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-05-23T10:37:39.325+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23T10:37:39.331+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2024-05-23T10:37:39.430+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2024-05-23T10:37:39.430+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-23T10:37:39.431+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-05-23T10:37:39.468+09:00  INFO 740 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-23T10:37:39.468+09:00  INFO 740 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 398 ms
+2024-05-23T10:37:39.505+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Starting...
+2024-05-23T10:37:39.506+09:00  WARN 740 --- [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-05-23T10:37:39.547+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-23 - Added connection oracle.jdbc.driver.T4CConnection@72dee741
+2024-05-23T10:37:39.551+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Start completed.
+2024-05-23T10:37:39.553+09:00  INFO 740 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23T10:37:39.556+09:00  INFO 740 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-23T10:37:39.562+09:00  INFO 740 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23T10:37:39.565+09:00  WARN 740 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 18.0.0 version for [org.hibernate.dialect.OracleDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 19.0.0. Check the community dialects project for available legacy versions.
+2024-05-23T10:37:39.626+09:00  INFO 740 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23T10:37:39.626+09:00  INFO 740 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:37:39.740+09:00  WARN 740 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-23T10:37:39.765+09:00  INFO 740 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-05-23T10:37:39.858+09:00  INFO 740 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-23T10:37:39.887+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path ''
+2024-05-23T10:37:39.893+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Started DemoApplication in 0.854 seconds (process running for 5068.606)
+2024-05-23T10:37:39.894+09:00  INFO 740 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-05-23T10:39:10.540+09:00  INFO 740 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-05-23T10:39:10.558+09:00  INFO 740 --- [Thread-212] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:39:10.559+09:00  INFO 740 --- [Thread-212] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Shutdown initiated...
+2024-05-23T10:39:10.570+09:00  INFO 740 --- [Thread-212] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Shutdown completed.
+2024-05-23T10:39:10.670+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Starting DemoApplication using Java 17.0.9 with PID 740 (D:\kdt\projects\demo\out\production\classes started by kh502 in D:\kdt\projects\demo)
+2024-05-23T10:39:10.671+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-05-23T10:39:10.901+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23T10:39:10.907+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2024-05-23T10:39:10.997+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2024-05-23T10:39:10.997+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-23T10:39:10.997+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-05-23T10:39:11.033+09:00  INFO 740 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-23T10:39:11.033+09:00  INFO 740 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 360 ms
+2024-05-23T10:39:11.069+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-24 - Starting...
+2024-05-23T10:39:11.069+09:00  WARN 740 --- [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-05-23T10:39:11.117+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-24 - Added connection oracle.jdbc.driver.T4CConnection@79aba8b1
+2024-05-23T10:39:11.117+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-24 - Start completed.
+2024-05-23T10:39:11.118+09:00  INFO 740 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23T10:39:11.122+09:00  INFO 740 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-23T10:39:11.126+09:00  INFO 740 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23T10:39:11.129+09:00  WARN 740 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 18.0.0 version for [org.hibernate.dialect.OracleDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 19.0.0. Check the community dialects project for available legacy versions.
+2024-05-23T10:39:11.181+09:00  INFO 740 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23T10:39:11.182+09:00  INFO 740 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:39:11.278+09:00  WARN 740 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-23T10:39:11.286+09:00  INFO 740 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-05-23T10:39:11.368+09:00  INFO 740 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-23T10:39:11.380+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path ''
+2024-05-23T10:39:11.382+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Started DemoApplication in 0.741 seconds (process running for 5160.096)
+2024-05-23T10:39:11.383+09:00  INFO 740 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-05-23T10:39:12.804+09:00  INFO 740 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-05-23T10:39:12.821+09:00  INFO 740 --- [Thread-221] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:39:12.822+09:00  INFO 740 --- [Thread-221] com.zaxxer.hikari.HikariDataSource       : HikariPool-24 - Shutdown initiated...
+2024-05-23T10:39:12.841+09:00  INFO 740 --- [Thread-221] com.zaxxer.hikari.HikariDataSource       : HikariPool-24 - Shutdown completed.
+2024-05-23T10:39:12.948+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Starting DemoApplication using Java 17.0.9 with PID 740 (D:\kdt\projects\demo\out\production\classes started by kh502 in D:\kdt\projects\demo)
+2024-05-23T10:39:12.948+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-05-23T10:39:13.225+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23T10:39:13.231+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2024-05-23T10:39:13.341+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2024-05-23T10:39:13.341+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-23T10:39:13.341+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-05-23T10:39:13.384+09:00  INFO 740 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-23T10:39:13.384+09:00  INFO 740 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 433 ms
+2024-05-23T10:39:13.431+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-25 - Starting...
+2024-05-23T10:39:13.431+09:00  WARN 740 --- [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-05-23T10:39:13.484+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-25 - Added connection oracle.jdbc.driver.T4CConnection@1f1cb9f0
+2024-05-23T10:39:13.484+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-25 - Start completed.
+2024-05-23T10:39:13.486+09:00  INFO 740 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23T10:39:13.490+09:00  INFO 740 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-23T10:39:13.496+09:00  INFO 740 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23T10:39:13.499+09:00  WARN 740 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 18.0.0 version for [org.hibernate.dialect.OracleDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 19.0.0. Check the community dialects project for available legacy versions.
+2024-05-23T10:39:13.560+09:00  INFO 740 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23T10:39:13.560+09:00  INFO 740 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:39:13.673+09:00  WARN 740 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-23T10:39:13.683+09:00  INFO 740 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-05-23T10:39:13.772+09:00  INFO 740 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-23T10:39:13.782+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path ''
+2024-05-23T10:39:13.786+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Started DemoApplication in 0.868 seconds (process running for 5162.5)
+2024-05-23T10:39:13.787+09:00  INFO 740 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-05-23T10:42:00.528+09:00  INFO 740 --- [http-nio-9080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-23T10:42:00.528+09:00  INFO 740 --- [http-nio-9080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-05-23T10:42:00.531+09:00  INFO 740 --- [http-nio-9080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-05-23T10:48:32.270+09:00  INFO 740 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-05-23T10:48:32.289+09:00  INFO 740 --- [Thread-230] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:48:32.290+09:00  INFO 740 --- [Thread-230] com.zaxxer.hikari.HikariDataSource       : HikariPool-25 - Shutdown initiated...
+2024-05-23T10:48:32.303+09:00  INFO 740 --- [Thread-230] com.zaxxer.hikari.HikariDataSource       : HikariPool-25 - Shutdown completed.
+2024-05-23T10:48:32.422+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Starting DemoApplication using Java 17.0.9 with PID 740 (D:\kdt\projects\demo\out\production\classes started by kh502 in D:\kdt\projects\demo)
+2024-05-23T10:48:32.423+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-05-23T10:48:32.771+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23T10:48:32.777+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2024-05-23T10:48:32.903+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2024-05-23T10:48:32.903+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-23T10:48:32.903+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-05-23T10:48:32.946+09:00  INFO 740 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-23T10:48:32.946+09:00  INFO 740 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 521 ms
+2024-05-23T10:48:32.989+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-26 - Starting...
+2024-05-23T10:48:32.989+09:00  WARN 740 --- [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-05-23T10:48:33.058+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-26 - Added connection oracle.jdbc.driver.T4CConnection@38ca6a81
+2024-05-23T10:48:33.058+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-26 - Start completed.
+2024-05-23T10:48:33.059+09:00  INFO 740 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23T10:48:33.063+09:00  INFO 740 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-23T10:48:33.069+09:00  INFO 740 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23T10:48:33.072+09:00  WARN 740 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 18.0.0 version for [org.hibernate.dialect.OracleDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 19.0.0. Check the community dialects project for available legacy versions.
+2024-05-23T10:48:33.152+09:00  INFO 740 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23T10:48:33.152+09:00  INFO 740 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:48:33.330+09:00  WARN 740 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-23T10:48:33.339+09:00  INFO 740 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-05-23T10:48:33.430+09:00  INFO 740 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-23T10:48:33.445+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path ''
+2024-05-23T10:48:33.449+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Started DemoApplication in 1.065 seconds (process running for 5722.162)
+2024-05-23T10:48:33.454+09:00  INFO 740 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-05-23T10:48:35.914+09:00  INFO 740 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-05-23T10:48:35.933+09:00  INFO 740 --- [Thread-239] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:48:35.933+09:00  INFO 740 --- [Thread-239] com.zaxxer.hikari.HikariDataSource       : HikariPool-26 - Shutdown initiated...
+2024-05-23T10:48:35.947+09:00  INFO 740 --- [Thread-239] com.zaxxer.hikari.HikariDataSource       : HikariPool-26 - Shutdown completed.
+2024-05-23T10:48:36.116+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Starting DemoApplication using Java 17.0.9 with PID 740 (D:\kdt\projects\demo\out\production\classes started by kh502 in D:\kdt\projects\demo)
+2024-05-23T10:48:36.116+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-05-23T10:48:36.406+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23T10:48:36.413+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2024-05-23T10:48:36.524+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2024-05-23T10:48:36.525+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-23T10:48:36.525+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-05-23T10:48:36.561+09:00  INFO 740 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-23T10:48:36.561+09:00  INFO 740 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 442 ms
+2024-05-23T10:48:36.600+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-27 - Starting...
+2024-05-23T10:48:36.600+09:00  WARN 740 --- [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-05-23T10:48:36.652+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-27 - Added connection oracle.jdbc.driver.T4CConnection@5555dc6c
+2024-05-23T10:48:36.652+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-27 - Start completed.
+2024-05-23T10:48:36.653+09:00  INFO 740 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23T10:48:36.657+09:00  INFO 740 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-23T10:48:36.663+09:00  INFO 740 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23T10:48:36.666+09:00  WARN 740 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 18.0.0 version for [org.hibernate.dialect.OracleDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 19.0.0. Check the community dialects project for available legacy versions.
+2024-05-23T10:48:36.723+09:00  INFO 740 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23T10:48:36.723+09:00  INFO 740 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:48:36.824+09:00  WARN 740 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-23T10:48:36.833+09:00  INFO 740 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-05-23T10:48:36.949+09:00  INFO 740 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-23T10:48:36.959+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path ''
+2024-05-23T10:48:36.963+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Started DemoApplication in 0.898 seconds (process running for 5725.677)
+2024-05-23T10:48:36.964+09:00  INFO 740 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-05-23T10:49:10.285+09:00  INFO 740 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-05-23T10:49:10.334+09:00  INFO 740 --- [Thread-248] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:49:10.334+09:00  INFO 740 --- [Thread-248] com.zaxxer.hikari.HikariDataSource       : HikariPool-27 - Shutdown initiated...
+2024-05-23T10:49:10.352+09:00  INFO 740 --- [Thread-248] com.zaxxer.hikari.HikariDataSource       : HikariPool-27 - Shutdown completed.
+2024-05-23T10:49:10.528+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Starting DemoApplication using Java 17.0.9 with PID 740 (D:\kdt\projects\demo\out\production\classes started by kh502 in D:\kdt\projects\demo)
+2024-05-23T10:49:10.528+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-05-23T10:49:10.849+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23T10:49:10.859+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2024-05-23T10:49:10.992+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2024-05-23T10:49:10.993+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-23T10:49:10.994+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-05-23T10:49:11.037+09:00  INFO 740 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-23T10:49:11.037+09:00  INFO 740 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 507 ms
+2024-05-23T10:49:11.082+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-28 - Starting...
+2024-05-23T10:49:11.082+09:00  WARN 740 --- [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-05-23T10:49:11.132+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-28 - Added connection oracle.jdbc.driver.T4CConnection@5f90de55
+2024-05-23T10:49:11.132+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-28 - Start completed.
+2024-05-23T10:49:11.133+09:00  INFO 740 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23T10:49:11.137+09:00  INFO 740 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-23T10:49:11.143+09:00  INFO 740 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23T10:49:11.146+09:00  WARN 740 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 18.0.0 version for [org.hibernate.dialect.OracleDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 19.0.0. Check the community dialects project for available legacy versions.
+2024-05-23T10:49:11.207+09:00  INFO 740 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23T10:49:11.207+09:00  INFO 740 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:49:11.338+09:00  WARN 740 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-23T10:49:11.350+09:00  INFO 740 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-05-23T10:49:11.446+09:00  INFO 740 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-23T10:49:11.473+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path ''
+2024-05-23T10:49:11.478+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Started DemoApplication in 0.978 seconds (process running for 5760.191)
+2024-05-23T10:49:11.479+09:00  INFO 740 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-05-23T10:49:13.939+09:00  INFO 740 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-05-23T10:49:13.958+09:00  INFO 740 --- [Thread-257] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:49:13.958+09:00  INFO 740 --- [Thread-257] com.zaxxer.hikari.HikariDataSource       : HikariPool-28 - Shutdown initiated...
+2024-05-23T10:49:13.975+09:00  INFO 740 --- [Thread-257] com.zaxxer.hikari.HikariDataSource       : HikariPool-28 - Shutdown completed.
+2024-05-23T10:49:14.100+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Starting DemoApplication using Java 17.0.9 with PID 740 (D:\kdt\projects\demo\out\production\classes started by kh502 in D:\kdt\projects\demo)
+2024-05-23T10:49:14.100+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-05-23T10:49:14.344+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23T10:49:14.350+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2024-05-23T10:49:14.460+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2024-05-23T10:49:14.461+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-23T10:49:14.461+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-05-23T10:49:14.500+09:00  INFO 740 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-23T10:49:14.500+09:00  INFO 740 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 398 ms
+2024-05-23T10:49:14.540+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-29 - Starting...
+2024-05-23T10:49:14.540+09:00  WARN 740 --- [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-05-23T10:49:14.588+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-29 - Added connection oracle.jdbc.driver.T4CConnection@51a3be9c
+2024-05-23T10:49:14.589+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-29 - Start completed.
+2024-05-23T10:49:14.590+09:00  INFO 740 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23T10:49:14.594+09:00  INFO 740 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-23T10:49:14.599+09:00  INFO 740 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23T10:49:14.602+09:00  WARN 740 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 18.0.0 version for [org.hibernate.dialect.OracleDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 19.0.0. Check the community dialects project for available legacy versions.
+2024-05-23T10:49:14.661+09:00  INFO 740 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23T10:49:14.662+09:00  INFO 740 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:49:14.767+09:00  WARN 740 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-23T10:49:14.775+09:00  INFO 740 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-05-23T10:49:14.871+09:00  INFO 740 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-23T10:49:14.885+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path ''
+2024-05-23T10:49:14.889+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Started DemoApplication in 0.822 seconds (process running for 5763.602)
+2024-05-23T10:49:14.890+09:00  INFO 740 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-05-23T10:49:18.394+09:00  INFO 740 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-05-23T10:49:18.409+09:00  INFO 740 --- [Thread-266] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:49:18.409+09:00  INFO 740 --- [Thread-266] com.zaxxer.hikari.HikariDataSource       : HikariPool-29 - Shutdown initiated...
+2024-05-23T10:49:18.421+09:00  INFO 740 --- [Thread-266] com.zaxxer.hikari.HikariDataSource       : HikariPool-29 - Shutdown completed.
+2024-05-23T10:49:18.631+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Starting DemoApplication using Java 17.0.9 with PID 740 (D:\kdt\projects\demo\out\production\classes started by kh502 in D:\kdt\projects\demo)
+2024-05-23T10:49:18.631+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-05-23T10:49:18.871+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23T10:49:18.877+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2024-05-23T10:49:18.986+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2024-05-23T10:49:18.986+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-23T10:49:18.987+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-05-23T10:49:19.031+09:00  INFO 740 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-23T10:49:19.031+09:00  INFO 740 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 399 ms
+2024-05-23T10:49:19.072+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-30 - Starting...
+2024-05-23T10:49:19.072+09:00  WARN 740 --- [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-05-23T10:49:19.121+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-30 - Added connection oracle.jdbc.driver.T4CConnection@3ea87503
+2024-05-23T10:49:19.121+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-30 - Start completed.
+2024-05-23T10:49:19.123+09:00  INFO 740 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23T10:49:19.128+09:00  INFO 740 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-23T10:49:19.134+09:00  INFO 740 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23T10:49:19.137+09:00  WARN 740 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 18.0.0 version for [org.hibernate.dialect.OracleDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 19.0.0. Check the community dialects project for available legacy versions.
+2024-05-23T10:49:19.197+09:00  INFO 740 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23T10:49:19.197+09:00  INFO 740 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:49:19.301+09:00  WARN 740 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-23T10:49:19.312+09:00  INFO 740 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-05-23T10:49:19.402+09:00  INFO 740 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-23T10:49:19.411+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path ''
+2024-05-23T10:49:19.415+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Started DemoApplication in 0.826 seconds (process running for 5768.128)
+2024-05-23T10:49:19.417+09:00  INFO 740 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-05-23T10:49:20.849+09:00  INFO 740 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-05-23T10:49:20.868+09:00  INFO 740 --- [Thread-275] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:49:20.868+09:00  INFO 740 --- [Thread-275] com.zaxxer.hikari.HikariDataSource       : HikariPool-30 - Shutdown initiated...
+2024-05-23T10:49:20.882+09:00  INFO 740 --- [Thread-275] com.zaxxer.hikari.HikariDataSource       : HikariPool-30 - Shutdown completed.
+2024-05-23T10:49:20.978+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Starting DemoApplication using Java 17.0.9 with PID 740 (D:\kdt\projects\demo\out\production\classes started by kh502 in D:\kdt\projects\demo)
+2024-05-23T10:49:20.978+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-05-23T10:49:21.213+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23T10:49:21.217+09:00  INFO 740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2024-05-23T10:49:21.315+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9080 (http)
+2024-05-23T10:49:21.316+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-23T10:49:21.316+09:00  INFO 740 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-05-23T10:49:21.352+09:00  INFO 740 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-23T10:49:21.352+09:00  INFO 740 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 372 ms
+2024-05-23T10:49:21.394+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-31 - Starting...
+2024-05-23T10:49:21.394+09:00  WARN 740 --- [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-05-23T10:49:21.446+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-31 - Added connection oracle.jdbc.driver.T4CConnection@6210547a
+2024-05-23T10:49:21.446+09:00  INFO 740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-31 - Start completed.
+2024-05-23T10:49:21.448+09:00  INFO 740 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23T10:49:21.452+09:00  INFO 740 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-23T10:49:21.456+09:00  INFO 740 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23T10:49:21.460+09:00  WARN 740 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 18.0.0 version for [org.hibernate.dialect.OracleDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 19.0.0. Check the community dialects project for available legacy versions.
+2024-05-23T10:49:21.521+09:00  INFO 740 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23T10:49:21.521+09:00  INFO 740 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23T10:49:21.611+09:00  WARN 740 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-23T10:49:21.619+09:00  INFO 740 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-05-23T10:49:21.707+09:00  INFO 740 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-23T10:49:21.716+09:00  INFO 740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9080 (http) with context path ''
+2024-05-23T10:49:21.719+09:00  INFO 740 --- [restartedMain] com.kh.demo.DemoApplication              : Started DemoApplication in 0.768 seconds (process running for 5770.433)
+2024-05-23T10:49:21.720+09:00  INFO 740 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
